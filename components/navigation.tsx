@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,11 +21,12 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo and Foundation Name */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-foreground rounded-full flex items-center justify-center">
-              <span className="text-background text-xs font-bold">ASF</span>
+           <Link href="/" className="flex items-center gap-2 font-bold text-xl">
+            <div className="w-8 h-8 bg-foreground rounded-full flex items-center justify-center">
+              {/* <span className="text-background text-sm font-bold">ASF</span> */}
+              <Image src={"/images/asf-logo.png"} alt="logo" height={50} width={50}/>
             </div>
-            <span className="hidden sm:inline font-bold text-sm">Aapka Sahyog</span>
+            <span className="hidden sm:inline">Aapka Sahyog Foundation</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -525,7 +525,7 @@ export default function Home() {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* <div className="grid md:grid-cols-2 gap-8 mb-12">
               {youtubeVideos.slice(0, 2).map((video, index) => (
                 <motion.div
                   key={index}
@@ -555,13 +555,12 @@ export default function Home() {
                       </a>
                     </div>
                     <div className="p-6 bg-gray-900">
-                      {/* <h3 className="text-xl font-bold mb-2">{video.title}</h3> */}
                       <p className="text-white/70">{video.description}</p>
                     </div>
                   </div>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {youtubeVideos.map((video, index) => (
@@ -697,39 +696,36 @@ export default function Home() {
             </motion.div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gray-900 rounded-2xl overflow-hidden group"
-                >
-                  <div className="relative h-48">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-xl font-bold">{testimonial.name}</h3>
-                      <p className="text-yellow-400 text-sm">{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <div className="text-4xl text-yellow-500/30 mb-4">"</div>
-                    <p className="text-white/80 italic mb-6 leading-relaxed">"{testimonial.text}"</p>
-                    <div className="flex items-center gap-2 text-white/60 text-sm">
-                      <MapPin size={14} />
-                      {testimonial.location}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+  {testimonials.map((testimonial, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="bg-gray-900 rounded-2xl overflow-hidden group p-8"
+    >
+      <div className="text-4xl text-yellow-500/30 mb-6 leading-none">"</div>
+      <p className="text-white/80 italic mb-8 leading-relaxed text-lg">"{testimonial.text}"</p>
+      
+      <div className="pt-6 border-t border-white/10">
+        <div className="flex flex-col">
+          <h3 className="text-xl font-bold text-white">{testimonial.name}</h3>
+          <div className="flex items-center justify-between mt-2">
+            <div>
+              <p className="text-yellow-400 text-sm">{testimonial.role}</p>
+              <div className="flex items-center gap-1 text-white/60 text-sm mt-1">
+                <MapPin size={12} />
+                {testimonial.location}
+              </div>
             </div>
+           
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
           </div>
         </section>
 

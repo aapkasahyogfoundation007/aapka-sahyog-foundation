@@ -11,23 +11,23 @@ export const metadata: Metadata = {
   title: "Aapka Sahyog Foundation | Social Impact NGO",
   description:
     "Aapka Sahyog Foundation - Empowering communities through education, environmental protection, and social welfare",
-  generator: "v0.app",
+
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/images/asf-logo.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "/images/asf-logo.png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon.svg",
+        url: "/images/asf-logo.png",
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/images/asf-logo.png",
   },
 }
 
