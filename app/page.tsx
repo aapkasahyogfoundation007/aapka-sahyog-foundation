@@ -6,31 +6,22 @@ import Link from "next/link"
 import Image from "next/image"
 import {
   ArrowRight,
-  Award,
   Users,
   Target,
   Heart,
   Leaf,
   BookOpen,
   Handshake,
-  Lightbulb,
-  Globe,
   Play,
   ChevronRight,
   TrendingUp,
   Shield,
   Star,
-  Clock,
   CheckCircle,
   MapPin,
-  BarChart3,
-  FileText,
-  Building2,
-  Medal,
   Target as TargetIcon,
   Zap,
   Eye,
-  Droplets,
   GraduationCap,
   Briefcase,
   Calendar,
@@ -46,10 +37,7 @@ import {
   School,
   Activity,
   TreePine,
-  Droplet,
   ShieldCheck,
-  Globe2,
-  Clock4,
   ExternalLink,
 } from "lucide-react"
 import { useEffect, useState } from "react"
@@ -57,9 +45,14 @@ import { motion } from "framer-motion"
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
+  const [currentBanner, setCurrentBanner] = useState(0)
 
   useEffect(() => {
     setIsLoaded(true)
+    const interval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % banners.length)
+    }, 5000)
+    return () => clearInterval(interval)
   }, [])
 
   // Banner Images
@@ -77,104 +70,11 @@ export default function Home() {
     { id: "6ivD8ryf4Bo",description: "Clean Green India Mission activities" },
   ]
 
-  const initiatives = [
-    {
-      title: "Education & Skill Development",
-      description: "Vocational training centers for youth empowerment in poultry, fishery, and technical skills",
-      icon: School,
-      stats: "500+ Youth Trained",
-      color: "bg-gray-900",
-      image: "/images/team-activity-1.jpg"
-    },
-    {
-      title: "Environmental Conservation",
-      description: "Active participation in Clean Green India Mission with pollution control and tree plantation",
-      icon: TreePine,
-      stats: "1000+ Trees Planted",
-      color: "bg-black",
-      image: "/images/environment-banner.jpg"
-    },
-    {
-      title: "Community Welfare",
-      description: "Support for SC/ST/OBC communities, women empowerment, and handicapped assistance programs",
-      icon: UsersIcon,
-      stats: "50+ Communities",
-      color: "bg-gray-900",
-      image: "/images/community-banner.jpg"
-    },
-    {
-      title: "Health Initiatives",
-      description: "Health awareness programs, eye/blood donation camps, and sanitation drives",
-      icon: Activity,
-      stats: "10,000+ Served",
-      color: "bg-black",
-      image: "/images/health-banner.jpg"
-    },
-  ]
-
   const stats = [
     { number: "50+", label: "Communities Served", icon: MapPin, description: "Across Uttar Pradesh" },
     { number: "5000+", label: "Lives Impacted", icon: Users, description: "Through our programs" },
     { number: "20+", label: "Active Programs", icon: TargetIcon, description: "In multiple sectors" },
     { number: "45+", label: "Social Objectives", icon: Target, description: "For comprehensive development" },
-  ]
-
-  const values = [
-    {
-      icon: ShieldCheck,
-      title: "Transparency",
-      description: "Complete financial transparency and regular impact reports",
-      color: "bg-gray-50"
-    },
-    {
-      icon: Handshake,
-      title: "Accountability",
-      description: "Accountable to our donors, partners, and communities we serve",
-      color: "bg-gray-100"
-    },
-    {
-      icon: Star,
-      title: "Excellence",
-      description: "Highest standards in program implementation and impact measurement",
-      color: "bg-gray-50"
-    },
-    {
-      icon: TrendingUp,
-      title: "Sustainability",
-      description: "Long-term solutions that create lasting environmental and social impact",
-      color: "bg-gray-100"
-    },
-  ]
-
-  const programs = [
-    {
-      title: "Skill Training Centers",
-      description: "Poultry farming, fishery management, and vocational skill development for youth employment",
-      image: "/images/team-activity-1.jpg",
-      stats: ["500+ Trained", "80% Employment"],
-      duration: "6-12 months"
-    },
-    {
-      title: "Education Support",
-      description: "Scholarships for backward classes, coaching centers, and educational guidance programs",
-      image: "/images/education-support.jpg",
-      stats: ["1000+ Students", "50 Schools"],
-      duration: "Ongoing"
-    },
-    {
-      title: "Women Empowerment",
-      description: "Self-help groups, entrepreneurship training, and income generation programs for women",
-      image: "/images/women-empowerment.jpg",
-      stats: ["800+ Women", "200+ SHGs"],
-      duration: "2-3 years"
-    },
-    {
-      title: "Health Initiatives",
-      description: "Eye camps, blood donation drives, health awareness, and sanitation programs",
-      image: "/images/health-camp.jpg",
-      stats: ["10,000+ Served", "50+ Camps"],
-      duration: "Monthly"
-    },
   ]
 
   const achievements = [
@@ -215,16 +115,6 @@ export default function Home() {
     { name: "Corporate Partners", logo: "/logos/corporate.png" },
   ]
 
-  // Animated Banner Slider
-  const [currentBanner, setCurrentBanner] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
-
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -235,8 +125,8 @@ export default function Home() {
     <>
       <Navigation />
       <main className="min-h-screen bg-white">
-        {/* Hero Section with Animated Banner - OVERLAY REMOVED */}
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Hero Section - Fully Responsive */}
+        <section className="relative h-[60vh] sm:h-[70vh] md:h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             {banners.map((banner, index) => (
               <motion.div
@@ -252,19 +142,20 @@ export default function Home() {
                   fill
                   className="object-cover w-full h-full"
                   priority
+                  sizes="100vw"
                 />
-                {/* OVERLAY REMOVED - Previously: bg-gradient-to-r from-black/70 via-black/50 to-transparent */}
               </motion.div>
             ))}
           </div>
           
           {/* Banner Navigation */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+          <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
             {banners.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentBanner(index)}
-                className={`w-3 h-3 rounded-full transition-all ${currentBanner === index ? 'bg-yellow-500 w-8' : 'bg-white/50 hover:bg-white'}`}
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${currentBanner === index ? 'bg-yellow-500 w-6 sm:w-8' : 'bg-white/50 hover:bg-white'}`}
+                aria-label={`Go to slide ${index + 1}`}
               />
             ))}
           </div>
@@ -273,16 +164,16 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+            className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
           >
-            <ChevronRight className="text-white rotate-90" size={24} />
+            <ChevronRight className="text-white rotate-90 w-5 h-5 sm:w-6 sm:h-6" />
           </motion.div>
         </section>
 
-        {/* Quick Stats */}
-        <section className="bg-gradient-to-r from-gray-900 to-black text-white py-12">
+        {/* Quick Stats - Responsive */}
+        <section className="bg-gradient-to-r from-gray-900 to-black text-white py-8 sm:py-10 md:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -290,73 +181,75 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center group"
+                  className="text-center group px-2"
                 >
-                  <div className="text-4xl md:text-5xl font-bold mb-2 text-yellow-400 group-hover:scale-110 transition-transform duration-300">{stat.number}</div>
-                  <div className="text-lg font-semibold mb-1">{stat.label}</div>
-                  <div className="text-sm opacity-80">{stat.description}</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2 text-yellow-400 group-hover:scale-105 transition-transform duration-300">
+                    {stat.number}
+                  </div>
+                  <div className="text-sm sm:text-base font-semibold mb-1">{stat.label}</div>
+                  <div className="text-xs sm:text-sm opacity-80 leading-tight">{stat.description}</div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* About Foundation */}
-        <section className="py-20 bg-white">
+        {/* About Foundation - Responsive */}
+        <section className="py-12 sm:py-16 md:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="space-y-6"
+                className="space-y-4 sm:space-y-6"
               >
-                <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 uppercase tracking-wider">
-                    <span className="w-8 h-px bg-yellow-500"></span>
+                <div className="space-y-2 sm:space-y-3">
+                  <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-yellow-600 uppercase tracking-wider">
+                    <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
                     About Our Foundation
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                     Building a Better Tomorrow, <span className="text-yellow-600">Together</span>
                   </h2>
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                     Established with a vision to create sustainable social impact, Aapka Sahyog Foundation 
                     works tirelessly to uplift marginalized communities through comprehensive development programs 
                     across Uttar Pradesh.
                   </p>
                 </div>
                 
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
-                    <Target className="text-yellow-600 mt-1" size={24} />
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-gray-50 rounded-lg sm:rounded-xl">
+                    <Target className="text-yellow-600 mt-1 w-5 h-5 sm:w-6 sm:h-6" />
                     <div>
-                      <h4 className="font-bold text-gray-900">Our Mission</h4>
-                      <p className="text-gray-600">To empower communities through sustainable development initiatives</p>
+                      <h4 className="font-bold text-gray-900 text-sm sm:text-base">Our Mission</h4>
+                      <p className="text-gray-600 text-sm">To empower communities through sustainable development initiatives</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
-                    <Eye className="text-yellow-600 mt-1" size={24} />
+                  <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-gray-50 rounded-lg sm:rounded-xl">
+                    <Eye className="text-yellow-600 mt-1 w-5 h-5 sm:w-6 sm:h-6" />
                     <div>
-                      <h4 className="font-bold text-gray-900">Our Vision</h4>
-                      <p className="text-gray-600">A society where every individual has access to opportunities and dignity</p>
+                      <h4 className="font-bold text-gray-900 text-sm sm:text-base">Our Vision</h4>
+                      <p className="text-gray-600 text-sm">A society where every individual has access to opportunities and dignity</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="flex gap-4">
-                  <Link
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
+                  {/* <Link
                     href="/about"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-black transition-all"
+                    className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-black transition-all text-sm sm:text-base"
                   >
                     Read Our Story
-                    <ArrowRight size={16} />
-                  </Link>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link> */}
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-900 rounded-lg font-semibold hover:bg-gray-50 transition-all"
+                    className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 border border-gray-300 text-gray-900 rounded-lg font-semibold hover:bg-gray-50 transition-all text-sm sm:text-base"
                   >
-                    <Phone size={16} />
+                    <Phone className="w-4 h-4" />
                     Contact Us
                   </Link>
                 </div>
@@ -367,42 +260,46 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="relative"
+                className="relative mt-8 sm:mt-0"
               >
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4">
-                    <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="relative h-32 sm:h-36 md:h-48 rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg">
                       <Image
                         src="/images/team-activity-1.png"
                         alt="Community Meeting"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-300"
+                        sizes="(max-width: 640px) 50vw, 25vw"
                       />
                     </div>
-                    <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+                    <div className="relative h-40 sm:h-48 md:h-64 rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg">
                       <Image
                         src="/images/team-award.png"
                         alt="Training Session"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-300"
+                        sizes="(max-width: 640px) 50vw, 25vw"
                       />
                     </div>
                   </div>
-                  <div className="space-y-4 mt-8">
-                    <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
+                  <div className="space-y-3 sm:space-y-4 mt-6 sm:mt-8">
+                    <div className="relative h-40 sm:h-48 md:h-64 rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg">
                       <Image
                         src="/images/our-work-3.png"
                         alt="Health Camp"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-300"
+                        sizes="(max-width: 640px) 50vw, 25vw"
                       />
                     </div>
-                    <div className="relative h-48 rounded-xl overflow-hidden shadow-lg">
+                    <div className="relative h-32 sm:h-36 md:h-48 rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg">
                       <Image
                         src="/images/our-work-4.png"
                         alt="Tree Plantation"
                         fill
                         className="object-cover hover:scale-110 transition-transform duration-300"
+                        sizes="(max-width: 640px) 50vw, 25vw"
                       />
                     </div>
                   </div>
@@ -412,51 +309,52 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Work Gallery Banner */}
-        <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+        {/* Work Gallery Banner - Responsive */}
+        <section className="py-10 sm:py-12 md:py-16 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-8 sm:mb-10 md:mb-12"
             >
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 uppercase tracking-wider mb-4">
-                <span className="w-8 h-px bg-yellow-500"></span>
+              <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-yellow-600 uppercase tracking-wider mb-3 sm:mb-4">
+                <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
                 Our Work Gallery
-                <span className="w-8 h-px bg-yellow-500"></span>
+                <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Impact in <span className="text-yellow-600">Action</span>
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-4">
                 Witness the transformative work we're doing across communities in Uttar Pradesh
               </p>
             </motion.div>
             
             {/* Featured Work Banner */}
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl mb-12">
+            <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl mb-8 sm:mb-10 md:mb-12">
               <Image
                 src="/images/about-banner.jpg"
                 alt="Featured Work - Community Development"
                 fill
                 className="object-cover"
+                sizes="100vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-yellow-500 text-black rounded-full text-sm font-semibold mb-4">
-                    <Camera size={14} />
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 text-white">
+                  <div className="inline-flex items-center gap-2 px-2 sm:px-3 py-1 bg-yellow-500 text-black rounded-full text-xs sm:text-sm font-semibold mb-2 sm:mb-3 md:mb-4">
+                    <Camera className="w-3 h-3 sm:w-4 sm:h-4" />
                     Featured Work
                   </div>
-                  <h3 className="text-3xl font-bold mb-2">Community Development in Rural Uttar Pradesh</h3>
-                  <p className="text-white/90 max-w-2xl">Transforming lives through integrated development programs</p>
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-1 sm:mb-2">Community Development in Rural Uttar Pradesh</h3>
+                  <p className="text-white/90 text-xs sm:text-sm md:text-base max-w-2xl">Transforming lives through integrated development programs</p>
                 </div>
               </div>
             </div>
             
             {/* Work Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {[
                 { image: "/images/team-activity-1.png" },
                 { image: "/images/our-work-2.png"},
@@ -470,99 +368,52 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group relative overflow-hidden rounded-xl shadow-lg"
+                  className="group relative overflow-hidden rounded-lg sm:rounded-xl shadow-md sm:shadow-lg"
                 >
-                  <div className="relative h-64">
+                  <div className="relative h-48 sm:h-56 md:h-64">
                     <Image
                       src={work.image}
-                      alt="IMAGE NOT FOUND"
+                      alt="Work Gallery"
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                        {/* <div className="text-sm font-semibold text-yellow-400 mb-1">{work.category}</div>
-                        <h4 className="text-xl font-bold">{work.title}</h4> */}
+                      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
+                        {/* Optional content can be added here */}
                       </div>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
-            
-            {/* <div className="text-center mt-12">
-              <Link
-                href="/gallery"
-                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-900 text-gray-900 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-all"
-              >
-                <Camera size={18} />
-                Explore Full Gallery
-              </Link>
-            </div> */}
           </div>
         </section>
 
-        {/* YouTube Videos Section */}
-        <section className="py-20 bg-black text-white">
+        {/* YouTube Videos Section - Responsive */}
+        <section className="py-12 sm:py-16 md:py-20 bg-black text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-8 sm:mb-10 md:mb-12"
             >
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-4">
-                <span className="w-8 h-px bg-yellow-500"></span>
+              <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-3 sm:mb-4">
+                <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
                 Video Stories
-                <span className="w-8 h-px bg-yellow-500"></span>
+                <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                 Watch Our <span className="text-yellow-400">Impact</span> Stories
               </h2>
-              <p className="text-lg text-white/80 max-w-3xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-3xl mx-auto px-4">
                 Experience the transformative work through our video documentation
               </p>
             </motion.div>
             
-            {/* <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {youtubeVideos.slice(0, 2).map((video, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="group"
-                >
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <div className="relative h-64 md:h-80">
-                      <Image
-                        src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                        alt={video.description}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <a
-                        href={`https://www.youtube.com/watch?v=${video.id}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/60 transition-colors"
-                      >
-                        <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Play size={32} className="text-black ml-1" />
-                        </div>
-                      </a>
-                    </div>
-                    <div className="p-6 bg-gray-900">
-                      <p className="text-white/70">{video.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div> */}
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {youtubeVideos.map((video, index) => (
                 <motion.div
                   key={index}
@@ -579,21 +430,22 @@ export default function Home() {
                     className="block"
                   >
                     <div className="relative rounded-lg overflow-hidden">
-                      <div className="relative h-40">
+                      <div className="relative h-32 sm:h-36 md:h-40">
                         <Image
-                          src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
+                          src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
                           alt={video.description}
                           fill
                           className="object-cover group-hover:scale-110 transition-transform duration-300"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center">
-                          <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
-                            <Play size={20} className="text-black ml-0.5" />
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-500 rounded-full flex items-center justify-center">
+                            <Play className="w-4 h-4 sm:w-5 sm:h-5 text-black ml-0.5" />
                           </div>
                         </div>
                       </div>
-                      <div className="p-4 bg-gray-900">
-                        {/* <h4 className="font-semibold text-sm line-clamp-2">{video.title}</h4> */}
+                      <div className="p-3 sm:p-4 bg-gray-900">
+                        {/* Optional: Add video title here */}
                       </div>
                     </div>
                   </a>
@@ -601,37 +453,37 @@ export default function Home() {
               ))}
             </div>
             
-            <div className="text-center mt-12">
+            <div className="text-center mt-8 sm:mt-10 md:mt-12">
               <a
                 href="https://www.youtube.com/@aapkasahyogfoundation"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-all transform hover:-translate-y-1"
+                className="inline-flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-all transform hover:-translate-y-0.5 sm:hover:-translate-y-1 text-sm sm:text-base"
               >
-                <Youtube size={24} />
+                <Youtube className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                 <span>Subscribe to Our YouTube Channel</span>
-                <ExternalLink size={18} />
+                <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
               </a>
             </div>
           </div>
         </section>
 
-        {/* Milestones Timeline */}
-        <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        {/* Milestones Timeline - Responsive */}
+        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-10 sm:mb-12 md:mb-16"
             >
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 uppercase tracking-wider mb-4">
-                <span className="w-8 h-px bg-yellow-500"></span>
+              <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-yellow-600 uppercase tracking-wider mb-3 sm:mb-4">
+                <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
                 Our Journey
-                <span className="w-8 h-px bg-yellow-500"></span>
+                <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Milestones of <span className="text-yellow-600">Impact</span>
               </h2>
             </motion.div>
@@ -639,7 +491,7 @@ export default function Home() {
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-yellow-500/30 hidden md:block"></div>
               
-              <div className="space-y-12">
+              <div className="space-y-8 sm:space-y-10 md:space-y-12">
                 {achievements.map((achievement, index) => {
                   const Icon = achievement.icon
                   return (
@@ -651,20 +503,20 @@ export default function Home() {
                       viewport={{ once: true }}
                       className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
                     >
-                      <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} mb-6 md:mb-0`}>
-                        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:border-yellow-500 transition-colors">
-                          <div className="flex items-center gap-3 mb-4">
-                            <div className="w-12 h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center">
-                              <Icon className="text-yellow-600" size={24} />
+                      <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-6 lg:pr-12' : 'md:pl-6 lg:pl-12'} mb-4 md:mb-0`}>
+                        <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-md sm:shadow-lg border border-gray-200 hover:border-yellow-500 transition-colors">
+                          <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                            <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-yellow-500/10 rounded-lg flex items-center justify-center">
+                              <Icon className="text-yellow-600 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                             </div>
-                            <div className="text-2xl font-bold text-gray-900">{achievement.year}</div>
+                            <div className="text-xl sm:text-2xl font-bold text-gray-900">{achievement.year}</div>
                           </div>
-                          <h3 className="text-xl font-bold text-gray-900 mb-2">{achievement.title}</h3>
-                          <p className="text-gray-600">{achievement.description}</p>
+                          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">{achievement.title}</h3>
+                          <p className="text-gray-600 text-sm sm:text-base">{achievement.description}</p>
                         </div>
                       </div>
                       
-                      <div className="w-6 h-6 bg-yellow-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-yellow-500 rounded-full border-2 sm:border-3 md:border-4 border-white shadow-lg z-10 my-2 md:my-0"></div>
                       
                       <div className="w-full md:w-1/2"></div>
                     </motion.div>
@@ -675,92 +527,54 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-20 bg-black text-white">
+        {/* Testimonials - Responsive */}
+        <section className="py-12 sm:py-16 md:py-20 bg-black text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-10 sm:mb-12 md:mb-16"
             >
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-4">
-                <span className="w-8 h-px bg-yellow-500"></span>
+              <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-3 sm:mb-4">
+                <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
                 Community Voices
-                <span className="w-8 h-px bg-yellow-500"></span>
+                <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                 Stories of <span className="text-yellow-400">Transformation</span>
               </h2>
             </motion.div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-  {testimonials.map((testimonial, index) => (
-    <motion.div
-      key={index}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      className="bg-gray-900 rounded-2xl overflow-hidden group p-8"
-    >
-      <div className="text-4xl text-yellow-500/30 mb-6 leading-none">"</div>
-      <p className="text-white/80 italic mb-8 leading-relaxed text-lg">"{testimonial.text}"</p>
-      
-      <div className="pt-6 border-t border-white/10">
-        <div className="flex flex-col">
-          <h3 className="text-xl font-bold text-white">{testimonial.name}</h3>
-          <div className="flex items-center justify-between mt-2">
-            <div>
-              <p className="text-yellow-400 text-sm">{testimonial.role}</p>
-              <div className="flex items-center gap-1 text-white/60 text-sm mt-1">
-                <MapPin size={12} />
-                {testimonial.location}
-              </div>
-            </div>
-           
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  ))}
-</div>
-          </div>
-        </section>
-
-        {/* Partners & Recognition */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-600 uppercase tracking-wider mb-4">
-                <span className="w-8 h-px bg-yellow-500"></span>
-                Our Partners
-                <span className="w-8 h-px bg-yellow-500"></span>
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Trusted by Leading Organizations
-              </h2>
-            </motion.div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {partners.map((partner, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+              {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-32 hover:bg-gray-100 transition-colors"
+                  className="bg-gray-900 rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden group p-4 sm:p-6 md:p-8"
                 >
-                  <div className="text-center">
-                    <div className="text-lg font-semibold text-gray-700">{partner.name}</div>
+                  <div className="text-3xl sm:text-4xl text-yellow-500/30 mb-4 sm:mb-6 leading-none">"</div>
+                  <p className="text-white/80 italic mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg">
+                    "{testimonial.text}"
+                  </p>
+                  
+                  <div className="pt-4 sm:pt-6 border-t border-white/10">
+                    <div className="flex flex-col">
+                      <h3 className="text-lg sm:text-xl font-bold text-white">{testimonial.name}</h3>
+                      <div className="flex items-center justify-between mt-1 sm:mt-2">
+                        <div>
+                          <p className="text-yellow-400 text-xs sm:text-sm">{testimonial.role}</p>
+                          <div className="flex items-center gap-1 text-white/60 text-xs sm:text-sm mt-1">
+                            <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
+                            {testimonial.location}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -768,94 +582,135 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
+        {/* Partners & Recognition - Responsive */}
+        <section className="py-10 sm:py-12 md:py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-8 sm:mb-10 md:mb-12"
+            >
+              <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-yellow-600 uppercase tracking-wider mb-3 sm:mb-4">
+                <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
+                Our Partners
+                <span className="w-6 sm:w-8 h-px bg-yellow-500"></span>
+              </div>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+                Trusted by Leading Organizations
+              </h2>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+              {partners.map((partner, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-50 rounded-lg sm:rounded-xl p-4 sm:p-6 flex items-center justify-center h-20 sm:h-24 md:h-28 lg:h-32 hover:bg-gray-100 transition-colors"
+                >
+                  <div className="text-center">
+                    <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-700">
+                      {partner.name}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA - Responsive */}
+        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-gray-900 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-3xl p-12 md:p-16 text-center overflow-hidden relative"
+              className="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-xl sm:rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 text-center overflow-hidden relative"
             >
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-black/20 rounded-full mb-8">
-                  <Star size={16} className="text-black" />
-                  <span className="text-black text-sm font-semibold">Join Our Mission Today</span>
+                <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-2 bg-black/20 rounded-full mb-4 sm:mb-6 md:mb-8">
+                  <Star className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
+                  <span className="text-black text-xs sm:text-sm font-semibold">Join Our Mission Today</span>
                 </div>
                 
-                <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 sm:mb-6">
                   Together, We Can Make a Difference
                 </h2>
                 
-                <p className="text-black/80 text-xl mb-10 max-w-2xl mx-auto font-medium">
+                <p className="text-black/80 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto font-medium">
                   Your support enables us to continue our vital work in education, healthcare, environment, and community development.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-10 md:mb-12">
                   <Link
-                    href="/donate"
-                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-black text-white rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
+                    href="/contact"
+                    className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-black text-white rounded-lg sm:rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 transform hover:-translate-y-0.5 sm:hover:-translate-y-1 hover:shadow-lg sm:hover:shadow-2xl text-sm sm:text-base w-full sm:w-auto"
                   >
-                    <Heart size={20} />
+                    <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
                     <span>Make a Donation</span>
-                    <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
-                    href="/volunteer"
-                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/20 text-black rounded-xl font-semibold hover:bg-white/30 transition-all duration-300 backdrop-blur-sm border border-black/10"
+                    href="/contact"
+                    className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-6 md:px-8 py-3 sm:py-4 bg-white/20 text-black rounded-lg sm:rounded-xl font-semibold hover:bg-white/30 transition-all duration-300 backdrop-blur-sm border border-black/10 text-sm sm:text-base w-full sm:w-auto"
                   >
-                    <Users size={20} />
+                    <Users className="w-4 h-4 sm:w-5 sm:h-5" />
                     <span>Become a Volunteer</span>
                   </Link>
                 </div>
                 
-                <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+                <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-2xl mx-auto">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-black">100%</div>
-                    <div className="text-sm text-black/70">Transparent</div>
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-black">100%</div>
+                    <div className="text-xs sm:text-sm text-black/70">Transparent</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-black">45+</div>
-                    <div className="text-sm text-black/70">Objectives</div>
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-black">45+</div>
+                    <div className="text-xs sm:text-sm text-black/70">Objectives</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-black">24/7</div>
-                    <div className="text-sm text-black/70">Support</div>
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-black">24/7</div>
+                    <div className="text-xs sm:text-sm text-black/70">Support</div>
                   </div>
                 </div>
               </div>
               
               {/* Decorative Elements */}
-              <div className="absolute top-0 left-0 w-64 h-64 bg-yellow-400/10 rounded-full -translate-x-32 -translate-y-32"></div>
-              <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400/10 rounded-full translate-x-48 translate-y-48"></div>
+              <div className="absolute top-0 left-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-yellow-400/10 rounded-full -translate-x-16 sm:-translate-x-24 md:-translate-x-32 -translate-y-16 sm:-translate-y-24 md:-translate-y-32"></div>
+              <div className="absolute bottom-0 right-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-yellow-400/10 rounded-full translate-x-24 sm:translate-x-32 md:translate-x-48 translate-y-24 sm:translate-y-32 md:translate-y-48"></div>
             </motion.div>
           </div>
         </section>
 
-        {/* Social Media Section */}
-        <section className="py-12 bg-gray-900 text-white">
+        {/* Social Media Section - Responsive */}
+        <section className="py-8 sm:py-10 md:py-12 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div>
-                <h3 className="text-2xl font-bold mb-2">Follow Our Journey</h3>
-                <p className="text-white/70">Stay updated with our latest work and impact stories</p>
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+              <div className="text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2">Follow Our Journey</h3>
+                <p className="text-white/70 text-sm sm:text-base">Stay updated with our latest work and impact stories</p>
               </div>
-              <div className="flex gap-4">
-                <a href="#" className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
-                  <Youtube size={20} />
+              <div className="flex gap-2 sm:gap-3 md:gap-4">
+                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="YouTube">
+                  <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
-                  <Facebook size={20} />
+                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Facebook">
+                  <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
-                  <Instagram size={20} />
+                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Instagram">
+                  <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
-                  <Twitter size={20} />
+                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Twitter">
+                  <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
-                  <Linkedin size={20} />
+                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="LinkedIn">
+                  <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               </div>
             </div>
