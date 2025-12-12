@@ -126,49 +126,66 @@ export default function Home() {
       <Navigation />
       <main className="min-h-screen bg-white">
         {/* Hero Section - Fully Responsive */}
-        <section className="relative h-[60vh] sm:h-[70vh] md:h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            {banners.map((banner, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: currentBanner === index ? 1 : 0 }}
-                transition={{ duration: 1 }}
-                className="absolute inset-0"
-              >
-                <Image
-                  src={banner}
-                  alt={`Foundation Banner ${index + 1}`}
-                  fill
-                  className="object-cover w-full h-full"
-                  priority
-                  sizes="100vw"
-                />
-              </motion.div>
-            ))}
-          </div>
-          
-          {/* Banner Navigation */}
-          <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
-            {banners.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentBanner(index)}
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${currentBanner === index ? 'bg-yellow-500 w-6 sm:w-8' : 'bg-white/50 hover:bg-white'}`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-          
-          {/* Scroll Indicator */}
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-          >
-            <ChevronRight className="text-white rotate-90 w-5 h-5 sm:w-6 sm:h-6" />
-          </motion.div>
-        </section>
+        <section
+  className="relative 
+    h-[45vh] sm:h-[60vh] md:h-screen
+    flex items-center justify-center 
+    overflow-hidden w-full">
+
+  {/* Background Banners */}
+  <div className="absolute inset-0 z-0">
+    {banners.map((banner, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: currentBanner === index ? 1 : 0 }}
+        transition={{ duration: 1 }}
+        className="absolute inset-0"
+      >
+        <Image
+          src={banner}
+          alt={`Foundation Banner ${index + 1}`}
+          fill
+          priority
+          sizes="100vw"
+          className="
+            w-full h-full 
+            object-contain        /* mobile: no cropping */
+            sm:object-cover       /* tablet & desktop: fill screen */
+            bg-black              /* prevents white gaps */
+          "
+        />
+      </motion.div>
+    ))}
+  </div>
+
+  {/* Banner Navigation */}
+  <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+    {banners.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrentBanner(index)}
+        className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all ${
+          currentBanner === index
+            ? 'bg-yellow-500 w-6 sm:w-8'
+            : 'bg-white/50 hover:bg-white'
+        }`}
+        aria-label={`Go to slide ${index + 1}`}
+      />
+    ))}
+  </div>
+
+  {/* Scroll Indicator */}
+  <motion.div
+    animate={{ y: [0, 10, 0] }}
+    transition={{ repeat: Infinity, duration: 2 }}
+    className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+  >
+    <ChevronRight className="text-white rotate-90 w-5 h-5 sm:w-6 sm:h-6" />
+  </motion.div>
+</section>
+
+
 
         {/* Quick Stats - Responsive */}
         <section className="bg-gradient-to-r from-gray-900 to-black text-white py-8 sm:py-10 md:py-12">
