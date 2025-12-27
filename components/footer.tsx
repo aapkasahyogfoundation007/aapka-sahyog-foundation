@@ -61,7 +61,18 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin size={16} />
-                <span>Jewar, Uttar Pradesh</span>
+                <span>Registered Office  :	Mohalla Khoriyan, Jewar
+Gautam Budh Nagar,UP- 203135</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin size={16} />
+                <span>Delhi Office -:-
+Shop No. 224, Krishna Mall, Plot No.5, Pocket 2, Sector 12, Dwarka, New Delhi-110078</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin size={16} />
+                <span>Jewar Office ADD.
+Om Sai Dharam Kanta, Jhajhar Road, Jewar, Goutam Budh Nagar, (U.P) </span>
               </div>
             </div>
           </div>
