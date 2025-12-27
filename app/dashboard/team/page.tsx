@@ -13,7 +13,9 @@ import {
   orderBy, 
   onSnapshot, 
   getDocs,
-  setDoc 
+  setDoc,
+  increment,
+  serverTimestamp
 } from "firebase/firestore"
 import { ref, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage"
 import { 
@@ -52,7 +54,15 @@ import {
   MoveUp,
   Settings,
   LayoutDashboard,
-  Network
+  Network,
+  BarChart,
+  TrendingUp,
+  Calendar,
+  Clock,
+  Activity,
+  Eye as EyeIcon,
+  Users as UsersIcon,
+  RefreshCw
 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
@@ -92,13 +102,39 @@ interface Banner {
   imagePath?: string
 }
 
+interface ViewCount {
+  id: string
+  date: string
+  count: number
+  uniqueVisitors: number
+  updatedAt: any
+  createdAt?: any
+}
+
+interface DailyView {
+  date: string
+  count: number
+  uniqueVisitors: number
+}
+
+interface RealTimeData {
+  onlineUsers: number
+  lastUpdated: string
+}
+
 export default function AdminDashboard() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([])
   const [menuItems, setMenuItems] = useState<MenuItem[]>([])
   const [banners, setBanners] = useState<Banner[]>([])
+  const [viewCounts, setViewCounts] = useState<ViewCount[]>([])
+  const [dailyViews, setDailyViews] = useState<DailyView[]>([])
+  const [realTimeData, setRealTimeData] = useState<RealTimeData>({
+    onlineUsers: 0,
+    lastUpdated: new Date().toISOString()
+  })
   const [editingMember, setEditingMember] = useState<TeamMember | null>(null)
   const [editingMenuItem, setEditingMenuItem] = useState<MenuItem | null>(null)
-  const [activeTab, setActiveTab] = useState<"team" | "banners">("team")
+  const [activeTab, setActiveTab] = useState<"team" | "banners" | "analytics">("team")
   const [selectedMenuId, setSelectedMenuId] = useState<string | null>(null)
   const [showMenuForm, setShowMenuForm] = useState(false)
   const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set())
@@ -138,6 +174,8 @@ export default function AdminDashboard() {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null)
   const [editingPreviewUrl, setEditingPreviewUrl] = useState<string | null>(null)
   const [bannerPreviewUrl, setBannerPreviewUrl] = useState<string | null>(null)
+  const [statsTimeRange, setStatsTimeRange] = useState<"today" | "week" | "month" | "all">("week")
+  const [isRefreshingStats, setIsRefreshingStats] = useState(false)
   const router = useRouter()
 
   useEffect(() => {
@@ -365,6 +403,185 @@ export default function AdminDashboard() {
 
     loadBanners()
   }, [])
+
+  // Load view counts
+  useEffect(() => {
+    const loadViewCounts = async () => {
+      try {
+        const q = query(collection(db, "viewCounts"), orderBy("date", "desc"))
+        const querySnapshot = await getDocs(q)
+        
+        const viewCountsData: ViewCount[] = []
+        querySnapshot.forEach((doc) => {
+          const data = doc.data()
+          viewCountsData.push({
+            id: doc.id,
+            date: data.date,
+            count: data.count || 0,
+            uniqueVisitors: data.uniqueVisitors || 0,
+            updatedAt: data.updatedAt,
+            createdAt: data.createdAt
+          } as ViewCount)
+        })
+        
+        setViewCounts(viewCountsData)
+        
+        // Calculate daily views for the selected time range
+        processDailyViews(viewCountsData)
+      } catch (err: any) {
+        console.error("Error loading view counts:", err)
+      }
+    }
+
+    const setupViewCountListener = () => {
+      try {
+        const q = query(collection(db, "viewCounts"), orderBy("date", "desc"))
+        
+        const unsubscribe = onSnapshot(
+          q,
+          (querySnapshot) => {
+            const viewCountsData: ViewCount[] = []
+            querySnapshot.forEach((doc) => {
+              const data = doc.data()
+              viewCountsData.push({
+                id: doc.id,
+                date: data.date,
+                count: data.count || 0,
+                uniqueVisitors: data.uniqueVisitors || 0,
+                updatedAt: data.updatedAt,
+                createdAt: data.createdAt
+              } as ViewCount)
+            })
+            
+            setViewCounts(viewCountsData)
+            processDailyViews(viewCountsData)
+            
+            // Update real-time data
+            const today = new Date().toISOString().split('T')[0]
+            const todayData = viewCountsData.find(v => v.date === today)
+            
+            setRealTimeData({
+              onlineUsers: todayData?.uniqueVisitors || 0,
+              lastUpdated: new Date().toISOString()
+            })
+          },
+          (error) => {
+            console.error("Error in view count listener:", error)
+          }
+        )
+        
+        return unsubscribe
+      } catch (err: any) {
+        console.error("Error setting up view count listener:", err)
+        return () => {}
+      }
+    }
+
+    loadViewCounts()
+    const unsubscribeViewCounts = setupViewCountListener()
+
+    return () => {
+      unsubscribeViewCounts()
+    }
+  }, [statsTimeRange])
+
+  // Process daily views based on selected time range
+  const processDailyViews = (viewCounts: ViewCount[]) => {
+    const sortedCounts = [...viewCounts].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    
+    let filteredCounts: ViewCount[] = []
+    const today = new Date()
+    
+    switch (statsTimeRange) {
+      case "today":
+        const todayStr = today.toISOString().split('T')[0]
+        filteredCounts = sortedCounts.filter(v => v.date === todayStr)
+        break
+      case "week":
+        const weekAgo = new Date(today)
+        weekAgo.setDate(today.getDate() - 7)
+        filteredCounts = sortedCounts.filter(v => new Date(v.date) >= weekAgo)
+        break
+      case "month":
+        const monthAgo = new Date(today)
+        monthAgo.setDate(today.getDate() - 30)
+        filteredCounts = sortedCounts.filter(v => new Date(v.date) >= monthAgo)
+        break
+      case "all":
+        filteredCounts = sortedCounts
+        break
+    }
+    
+    const dailyViewsData = filteredCounts.map(v => ({
+      date: v.date,
+      count: v.count,
+      uniqueVisitors: v.uniqueVisitors
+    }))
+    
+    setDailyViews(dailyViewsData)
+  }
+
+  // Refresh stats
+  const refreshStats = async () => {
+    setIsRefreshingStats(true)
+    try {
+      const q = query(collection(db, "viewCounts"), orderBy("date", "desc"))
+      const querySnapshot = await getDocs(q)
+      
+      const viewCountsData: ViewCount[] = []
+      querySnapshot.forEach((doc) => {
+        const data = doc.data()
+        viewCountsData.push({
+          id: doc.id,
+          date: data.date,
+          count: data.count || 0,
+          uniqueVisitors: data.uniqueVisitors || 0,
+          updatedAt: data.updatedAt,
+          createdAt: data.createdAt
+        } as ViewCount)
+      })
+      
+      setViewCounts(viewCountsData)
+      processDailyViews(viewCountsData)
+      
+      setSuccess("Stats refreshed successfully!")
+      setTimeout(() => setSuccess(null), 3000)
+    } catch (err: any) {
+      setError(`Failed to refresh stats: ${err.message}`)
+    } finally {
+      setIsRefreshingStats(false)
+    }
+  }
+
+  // Calculate statistics
+  const calculateStats = () => {
+    const totalViews = viewCounts.reduce((sum, v) => sum + v.count, 0)
+    const totalUniqueVisitors = viewCounts.reduce((sum, v) => sum + v.uniqueVisitors, 0)
+    
+    const today = new Date().toISOString().split('T')[0]
+    const todayData = viewCounts.find(v => v.date === today)
+    const todayViews = todayData?.count || 0
+    const todayUnique = todayData?.uniqueVisitors || 0
+    
+    const yesterday = new Date()
+    yesterday.setDate(yesterday.getDate() - 1)
+    const yesterdayStr = yesterday.toISOString().split('T')[0]
+    const yesterdayData = viewCounts.find(v => v.date === yesterdayStr)
+    const yesterdayViews = yesterdayData?.count || 0
+    
+    const dailyAvg = viewCounts.length > 0 ? totalViews / viewCounts.length : 0
+    
+    return {
+      totalViews,
+      totalUniqueVisitors,
+      todayViews,
+      todayUnique,
+      yesterdayViews,
+      dailyAvg: Math.round(dailyAvg)
+    }
+  }
+
+  const stats = calculateStats()
 
   // Helper functions for menu hierarchy
   const getMainMenus = () => {
@@ -1136,6 +1353,26 @@ export default function AdminDashboard() {
     setError(null)
   }
 
+  // Format date for display
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString)
+    return date.toLocaleDateString('en-US', { 
+      month: 'short', 
+      day: 'numeric',
+      year: date.getFullYear() !== new Date().getFullYear() ? 'numeric' : undefined
+    })
+  }
+
+  // Format time for display
+  const formatTime = (dateString: string) => {
+    const date = new Date(dateString)
+    return date.toLocaleTimeString('en-US', { 
+      hour: '2-digit', 
+      minute: '2-digit',
+      hour12: true 
+    })
+  }
+
   // Recursive component to render menu tree
   const renderMenuTree = (parentId: string | null, level = 0) => {
     const items = menuItems
@@ -1249,7 +1486,7 @@ export default function AdminDashboard() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Dashboard</h1>
-              <p className="text-gray-600">Manage team hierarchy and home page banners</p>
+              <p className="text-gray-600">Manage team hierarchy, banners, and view analytics</p>
             </div>
             <Button variant="outline" size="sm" onClick={handleLogout} className="self-start sm:self-center">
               <LogOut className="w-4 h-4 mr-2" />
@@ -1284,6 +1521,19 @@ export default function AdminDashboard() {
                 <div className="flex items-center gap-2">
                   <Home className="w-4 h-4" />
                   Banner Management
+                </div>
+              </button>
+              <button
+                onClick={() => setActiveTab("analytics")}
+                className={`py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
+                  activeTab === "analytics"
+                    ? "border-black text-black"
+                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <BarChart className="w-4 h-4" />
+                  Analytics
                 </div>
               </button>
             </nav>
@@ -1687,7 +1937,7 @@ export default function AdminDashboard() {
           </div>
         )}
 
-        {/* BANNER MANAGEMENT TAB - Same as before */}
+        {/* BANNER MANAGEMENT TAB */}
         {activeTab === "banners" && (
           <div className="space-y-6">
             {/* Add New Banner Form */}
@@ -1912,6 +2162,230 @@ export default function AdminDashboard() {
                   ))}
                 </div>
               )}
+            </div>
+          </div>
+        )}
+
+        {/* ANALYTICS TAB */}
+        {activeTab === "analytics" && (
+          <div className="space-y-6">
+            {/* Stats Summary */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {/* Total Views Card */}
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-blue-50 rounded-lg">
+                    <EyeIcon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <button
+                    onClick={refreshStats}
+                    disabled={isRefreshingStats}
+                    className="p-2 hover:bg-gray-100 rounded-lg"
+                    title="Refresh stats"
+                  >
+                    <RefreshCw className={`w-4 h-4 text-gray-500 ${isRefreshingStats ? 'animate-spin' : ''}`} />
+                  </button>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-1">{stats.totalViews.toLocaleString()}</h3>
+                <p className="text-sm text-gray-600">Total Page Views</p>
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-500">Today</span>
+                    <span className="font-semibold">{stats.todayViews.toLocaleString()}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Unique Visitors Card */}
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-green-50 rounded-lg">
+                    <UsersIcon className="w-6 h-6 text-green-600" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-1">{stats.totalUniqueVisitors.toLocaleString()}</h3>
+                <p className="text-sm text-gray-600">Unique Visitors</p>
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-500">Today</span>
+                    <span className="font-semibold">{stats.todayUnique.toLocaleString()}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Daily Average Card */}
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-purple-50 rounded-lg">
+                    <TrendingUp className="w-6 h-6 text-purple-600" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-1">{stats.dailyAvg.toLocaleString()}</h3>
+                <p className="text-sm text-gray-600">Daily Average</p>
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-500">Yesterday</span>
+                    <span className="font-semibold">{stats.yesterdayViews.toLocaleString()}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Real-time Card */}
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="p-3 bg-orange-50 rounded-lg">
+                    <Activity className="w-6 h-6 text-orange-600" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-1">{realTimeData.onlineUsers.toLocaleString()}</h3>
+                <p className="text-sm text-gray-600">Online Visitors</p>
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="text-xs text-gray-500">
+                    Updated {formatTime(realTimeData.lastUpdated)}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Time Range Selector */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-bold text-gray-900">View Analytics</h2>
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4 text-gray-500" />
+                  <span className="text-sm text-gray-600">Time Range:</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-2 mb-6">
+                {(["today", "week", "month", "all"] as const).map((range) => (
+                  <button
+                    key={range}
+                    onClick={() => setStatsTimeRange(range)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      statsTimeRange === range
+                        ? 'bg-black text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {range.charAt(0).toUpperCase() + range.slice(1)}
+                  </button>
+                ))}
+              </div>
+
+              {/* Daily Views Table */}
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Date</th>
+                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Page Views</th>
+                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Unique Visitors</th>
+                      <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Average per Visitor</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {dailyViews.length === 0 ? (
+                      <tr>
+                        <td colSpan={4} className="py-8 text-center text-gray-500">
+                          No data available for the selected time range
+                        </td>
+                      </tr>
+                    ) : (
+                      dailyViews.map((day) => (
+                        <tr key={day.date} className="border-b border-gray-100 hover:bg-gray-50">
+                          <td className="py-3 px-4">
+                            <div className="flex items-center gap-2">
+                              <Calendar className="w-4 h-4 text-gray-400" />
+                              <span className="font-medium">{formatDate(day.date)}</span>
+                              {day.date === new Date().toISOString().split('T')[0] && (
+                                <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">
+                                  Today
+                                </span>
+                              )}
+                            </div>
+                          </td>
+                          <td className="py-3 px-4">
+                            <div className="flex items-center gap-2">
+                              <EyeIcon className="w-4 h-4 text-blue-500" />
+                              <span className="font-bold">{day.count.toLocaleString()}</span>
+                            </div>
+                          </td>
+                          <td className="py-3 px-4">
+                            <div className="flex items-center gap-2">
+                              <UsersIcon className="w-4 h-4 text-green-500" />
+                              <span>{day.uniqueVisitors.toLocaleString()}</span>
+                            </div>
+                          </td>
+                          <td className="py-3 px-4">
+                            <div className="flex items-center gap-2">
+                              <TrendingUp className="w-4 h-4 text-purple-500" />
+                              <span>
+                                {day.uniqueVisitors > 0 
+                                  ? (day.count / day.uniqueVisitors).toFixed(1)
+                                  : '0.0'}
+                              </span>
+                            </div>
+                          </td>
+                        </tr>
+                      ))
+                    )}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Summary */}
+              {dailyViews.length > 0 && (
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <p className="text-sm text-gray-600">Total in period</p>
+                      <p className="text-2xl font-bold text-gray-900">
+                        {dailyViews.reduce((sum, day) => sum + day.count, 0).toLocaleString()}
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <p className="text-sm text-gray-600">Unique in period</p>
+                      <p className="text-2xl font-bold text-gray-900">
+                        {dailyViews.reduce((sum, day) => sum + day.uniqueVisitors, 0).toLocaleString()}
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <p className="text-sm text-gray-600">Avg per day</p>
+                      <p className="text-2xl font-bold text-gray-900">
+                        {(dailyViews.reduce((sum, day) => sum + day.count, 0) / dailyViews.length).toFixed(1)}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Recent Activity */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Recent Activity</h2>
+              <div className="space-y-4">
+                {viewCounts.slice(0, 5).map((view) => (
+                  <div key={view.id} className="flex items-center justify-between p-3 border border-gray-100 rounded-lg hover:bg-gray-50">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-blue-50 rounded-lg">
+                        <EyeIcon className="w-4 h-4 text-blue-600" />
+                      </div>
+                      <div>
+                        <p className="font-medium">
+                          {view.date === new Date().toISOString().split('T')[0] ? 'Today' : formatDate(view.date)}
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          {view.count.toLocaleString()} views • {view.uniqueVisitors.toLocaleString()} unique visitors
+                        </p>
+                      </div>
+                    </div>
+                    <div className="text-sm text-gray-500">
+                      {view.updatedAt && formatTime(view.updatedAt.toDate().toISOString())}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         )}

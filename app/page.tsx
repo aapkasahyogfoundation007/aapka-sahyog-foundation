@@ -914,21 +914,16 @@ export default function Home() {
                 <p className="text-white/70 text-sm sm:text-base">Stay updated with our latest work and impact stories</p>
               </div>
               <div className="flex gap-2 sm:gap-3 md:gap-4">
-                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="YouTube">
+                <a href="https://youtube.com/@aapkasahyogfoundation?si=grYCLhqeIoBHVOSc" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="YouTube">
                   <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/1SpxhPXM8r/" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Facebook">
                   <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Instagram">
+                <a href="https://www.instagram.com/aapkasahyogfoundation?igsh=ZzRhbjZ6dWVkYm1p" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Instagram">
                   <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="Twitter">
-                  <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
-                </a>
-                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors" aria-label="LinkedIn">
-                  <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
-                </a>
+               
               </div>
             </div>
           </div>

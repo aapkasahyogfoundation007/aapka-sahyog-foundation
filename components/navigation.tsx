@@ -198,31 +198,19 @@ export function Navigation() {
 
   const socialLinks = [
     { 
-      href: "https://facebook.com", 
+      href: "https://www.facebook.com/share/1SpxhPXM8r/", 
       label: "Facebook", 
       icon: <Facebook className="w-4 h-4" />,
       ariaLabel: "Visit our Facebook page"
     },
     { 
-      href: "https://twitter.com", 
-      label: "Twitter", 
-      icon: <Twitter className="w-4 h-4" />,
-      ariaLabel: "Visit our Twitter page"
-    },
-    { 
-      href: "https://instagram.com", 
+      href: "https://www.instagram.com/aapkasahyogfoundation?igsh=ZzRhbjZ6dWVkYm1p", 
       label: "Instagram", 
       icon: <Instagram className="w-4 h-4" />,
       ariaLabel: "Visit our Instagram page"
     },
     { 
-      href: "https://linkedin.com", 
-      label: "LinkedIn", 
-      icon: <Linkedin className="w-4 h-4" />,
-      ariaLabel: "Visit our LinkedIn page"
-    },
-    { 
-      href: "https://youtube.com", 
+      href: "https://youtube.com/@aapkasahyogfoundation?si=grYCLhqeIoBHVOSc", 
       label: "YouTube", 
       icon: <Youtube className="w-4 h-4" />,
       ariaLabel: "Visit our YouTube channel"
