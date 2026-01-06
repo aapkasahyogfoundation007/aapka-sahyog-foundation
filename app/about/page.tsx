@@ -2,7 +2,7 @@
 
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { CheckCircle, Download, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight } from "lucide-react"
+import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, BookOpen, Eye, ZoomIn, ZoomOut, Maximize2 } from "lucide-react"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 
@@ -10,6 +10,8 @@ export default function About() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
+  const [pdfZoom, setPdfZoom] = useState(100)
+  const [isFullscreen, setIsFullscreen] = useState(false)
   const imagesPerPage = 6
 
   useEffect(() => {
@@ -134,6 +136,18 @@ export default function About() {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1)
     }
+  }
+
+  const handleZoomIn = () => {
+    setPdfZoom(prev => Math.min(prev + 25, 200))
+  }
+
+  const handleZoomOut = () => {
+    setPdfZoom(prev => Math.max(prev - 25, 50))
+  }
+
+  const handleFullscreenToggle = () => {
+    setIsFullscreen(!isFullscreen)
   }
 
   return (
@@ -376,37 +390,153 @@ export default function About() {
           </div>
         </section>
 
-        {/* PDF Preview Section - Responsive */}
+        {/* Beautiful PDF Preview Section - Responsive */}
         <section className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 mb-12 md:mb-16">
-          <div className="flex flex-col items-center">
-            <div className="text-center space-y-3 sm:space-y-4 mb-6 md:mb-8 w-full md:w-1/2">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Foundation ByLaws</h2>
-              <p className="text-sm sm:text-base text-muted-foreground">
-                Official constitution and governing rules of Aapka Sahyog Foundation
+          <div className="space-y-6 sm:space-y-8">
+            <div className="text-center space-y-3 sm:space-y-4">
+              <div className="inline-flex items-center justify-center gap-2 sm:gap-3 p-3 sm:p-4 bg-primary/10 rounded-full mb-2">
+                <FileText className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
+                <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
+              </div>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Foundation Bylaws & Constitution</h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+                Official governing document outlining our principles, structure, and operational guidelines
               </p>
-              <div className="flex justify-center">
-                <a
-                  href="/documents/laws.pdf"
-                  download
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 bg-foreground text-background rounded-lg font-semibold text-sm sm:text-base hover:bg-muted-foreground transition-colors duration-200"
+            </div>
+
+            {/* Beautiful PDF Container */}
+            <div className={`animate-fade-in-up transition-all duration-300 ${isFullscreen ? 'fixed inset-0 z-50 bg-background p-4' : 'relative'}`}>
+              {isFullscreen && (
+                <button
+                  onClick={handleFullscreenToggle}
+                  className="fixed top-4 right-4 z-50 p-2 bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-colors"
                 >
-                  <Download size={16} className="sm:w-5 sm:h-5" />
-                  Download PDF
-                </a>
+                  <Maximize2 className="h-5 w-5 rotate-45" />
+                </button>
+              )}
+              
+              <div className={`bg-gradient-to-br from-background via-secondary/50 to-background border border-border rounded-2xl overflow-hidden shadow-2xl ${isFullscreen ? 'h-[calc(100vh-2rem)]' : ''}`}>
+                {/* PDF Header */}
+                <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 p-4 sm:p-6 border-b border-border">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <div className="p-2 bg-primary/10 rounded-lg">
+                        <FileText className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-base sm:text-lg">Aapka Sahyog Foundation Bylaws</h3>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Official Document • Version 1.0 • Last Updated: 2024</p>
+                      </div>
+                    </div>
+                    
+                    {/* PDF Controls */}
+                    <div className="flex items-center gap-1 sm:gap-2 bg-background border border-border rounded-lg p-1">
+                      <button
+                        onClick={handleZoomOut}
+                        className="p-2 hover:bg-secondary rounded-md transition-colors"
+                        title="Zoom Out"
+                      >
+                        <ZoomOut className="h-4 w-4" />
+                      </button>
+                      <div className="px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium min-w-[60px] text-center">
+                        {pdfZoom}%
+                      </div>
+                      <button
+                        onClick={handleZoomIn}
+                        className="p-2 hover:bg-secondary rounded-md transition-colors"
+                        title="Zoom In"
+                      >
+                        <ZoomIn className="h-4 w-4" />
+                      </button>
+                      <div className="h-4 w-px bg-border mx-1"></div>
+                      <button
+                        onClick={handleFullscreenToggle}
+                        className="p-2 hover:bg-secondary rounded-md transition-colors"
+                        title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+                      >
+                        <Maximize2 className="h-4 w-4" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* PDF Viewer */}
+                <div className="relative" style={{ height: isFullscreen ? 'calc(100vh - 180px)' : '500px' }}>
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-secondary/20 to-transparent">
+                    <div className="text-center space-y-2 p-8">
+                      <Eye className="h-12 w-12 text-muted-foreground/50 mx-auto" />
+                      <p className="text-sm text-muted-foreground">Scroll to view document</p>
+                    </div>
+                  </div>
+                  
+                  <iframe
+                    src={`/documents/laws.pdf#view=fitH&zoom=${pdfZoom}`}
+                    className="w-full h-full relative z-10"
+                    title="Aapka Sahyog Foundation ByLaws"
+                    style={{ 
+                      transform: `scale(${pdfZoom / 100})`,
+                      transformOrigin: 'center',
+                      height: '100%',
+                      width: '100%'
+                    }}
+                  />
+                </div>
+
+                {/* PDF Footer */}
+                <div className="bg-gradient-to-r from-secondary/30 via-secondary/20 to-secondary/30 p-3 sm:p-4 border-t border-border">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
+                    <div className="text-xs sm:text-sm text-muted-foreground">
+                      <span className="font-medium">Viewing Tips:</span> Use mouse wheel to scroll • Use controls above to adjust zoom
+                    </div>
+                    <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                      <div className="flex items-center gap-1">
+                        <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
+                        <span>Official Document</span>
+                      </div>
+                      <span>•</span>
+                      <span>Secure & Verified</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* PDF Preview */}
-            <div className="animate-fade-in-up bg-secondary border border-border rounded-lg overflow-hidden shadow-sm w-full md:w-1/2">
-              <div className="h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px] w-full">
-                <iframe
-                  src="/documents/laws.pdf#view=fitH"
-                  className="w-full h-full"
-                  title="Aapka Sahyog Foundation ByLaws"
-                />
+            {/* Document Info Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+              <div className="bg-secondary border border-border rounded-xl p-4 sm:p-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Shield className="h-5 w-5 text-primary" />
+                  </div>
+                  <h4 className="font-bold">Legal Compliance</h4>
+                </div>
+                <p className="text-xs sm:text-sm text-muted-foreground">
+                  Registered under the Societies Registration Act, 1860. All operations follow regulatory standards.
+                </p>
               </div>
-              <div className="p-2 sm:p-3 md:p-4 border-t border-border bg-background text-center text-xs sm:text-sm text-muted-foreground">
-                <p>Scroll to navigate through the document | Use browser controls to zoom or print</p>
+              
+              <div className="bg-secondary border border-border rounded-xl p-4 sm:p-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <h4 className="font-bold">Governing Body</h4>
+                </div>
+                <p className="text-xs sm:text-sm text-muted-foreground">
+                  Managed by a dedicated board of trustees and experienced committee members.
+                </p>
+              </div>
+              
+              <div className="bg-secondary border border-border rounded-xl p-4 sm:p-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 bg-primary/10 rounded-lg">
+                    <Heart className="h-5 w-5 text-primary" />
+                  </div>
+                  <h4 className="font-bold">Transparency</h4>
+                </div>
+                <p className="text-xs sm:text-sm text-muted-foreground">
+                  Annual reports and financial statements available upon request. We believe in open governance.
+                </p>
               </div>
             </div>
           </div>
