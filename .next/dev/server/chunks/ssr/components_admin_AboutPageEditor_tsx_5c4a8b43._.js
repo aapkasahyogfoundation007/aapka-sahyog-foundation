@@ -20,13 +20,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/file-text.js [app-ssr] (ecmascript) <export default as FileText>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/globe.js [app-ssr] (ecmascript) <export default as Globe>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/users.js [app-ssr] (ecmascript) <export default as Users>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/download.js [app-ssr] (ecmascript) <export default as Download>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-alert.js [app-ssr] (ecmascript) <export default as AlertCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-check-big.js [app-ssr] (ecmascript) <export default as CheckCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$move$2d$up$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MoveUp$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/move-up.js [app-ssr] (ecmascript) <export default as MoveUp>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$move$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MoveDown$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/move-down.js [app-ssr] (ecmascript) <export default as MoveDown>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/layers.js [app-ssr] (ecmascript) <export default as Layers>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__File$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/file.js [app-ssr] (ecmascript) <export default as File>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$pen$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileEdit$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/file-pen.js [app-ssr] (ecmascript) <export default as FileEdit>");
 "use client";
 ;
 ;
@@ -47,7 +46,8 @@ function AboutPageEditor() {
     const [bannerPreviewUrl, setBannerPreviewUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [galleryImageFile, setGalleryImageFile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [galleryPreviewUrl, setGalleryPreviewUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [pdfFile, setPdfFile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [bylawsImageFile, setBylawsImageFile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [bylawsPreviewUrl, setBylawsPreviewUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [newGalleryImage, setNewGalleryImage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
         alt: "",
         category: ""
@@ -65,6 +65,43 @@ function AboutPageEditor() {
         title: "",
         description: ""
     });
+    // Default bylaws text
+    const DEFAULT_BYLAWS_TEXT = `**आपका सहयोग फाउंडेशन संविधान एवं नियमावली**
+
+**अनुच्छेद 1: संगठन का नाम**
+संगठन का नाम "आपका सहयोग फाउंडेशन" होगा, जिसे संक्षेप में "ए.एस.एफ." कहा जाएगा।
+
+**अनुच्छेद 2: मुख्य उद्देश्य**
+1. समाज के कमजोर वर्गों को सहायता प्रदान करना
+2. महिला सशक्तिकरण एवं बाल संरक्षण
+3. पर्यावरण संरक्षण एवं स्वच्छता अभियान
+4. निःशुल्क शिक्षा एवं स्वास्थ्य सेवाएं प्रदान करना
+5. सामाजिक न्याय एवं समानता को बढ़ावा देना
+
+**अनुच्छेद 3: सदस्यता**
+1. 18 वर्ष से अधिक आयु का कोई भी व्यक्ति सदस्य बन सकता है
+2. सदस्यता फॉर्म भरकर एवं आवश्यक दस्तावेज जमा करके
+3. सदस्यता निर्धारित नियमों के अधीन होगी
+
+**अनुच्छेद 4: प्रबंधन समिति**
+1. कार्यकारी समिति में अध्यक्ष, सचिव, कोषाध्यक्ष एवं 4 सदस्य होंगे
+2. समिति का चुनाव प्रति 3 वर्ष में आम सभा द्वारा किया जाएगा
+3. समिति की बैठक प्रति माह कम से कम एक बार आयोजित की जाएगी
+
+**अनुच्छेद 5: वित्तीय व्यवस्था**
+1. सभी दान रसीदों के साथ स्वीकार किए जाएंगे
+2. वार्षिक लेखा परीक्षा अनिवार्य होगी
+3. सभी वित्तीय लेन-देन बैंक खाते के माध्यम से किए जाएंगे
+
+**अनुच्छेद 6: सामान्य सभा**
+1. वार्षिक सामान्य सभा प्रत्येक वर्ष मार्च माह में आयोजित की जाएगी
+2. विशेष सामान्य सभा आवश्यकता पड़ने पर बुलाई जा सकेगी
+3. सभी निर्णय बहुमत से लिए जाएंगे
+
+**अनुच्छेद 7: संशोधन**
+इस संविधान में संशोधन सामान्य सभा के दो-तिहाई बहुमत से किया जा सकेगा।
+
+**नोट:** यह संविधान सोसायटी पंजीकरण अधिनियम, 1860 के अंतर्गत पंजीकृत है।`;
     // Load about page data
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const loadAboutData = async ()=>{
@@ -72,7 +109,12 @@ function AboutPageEditor() {
                 const docRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$firebase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], "aboutPage", "main");
                 const docSnap = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getDoc"])(docRef);
                 if (docSnap.exists()) {
-                    setAboutData(docSnap.data());
+                    const data = docSnap.data();
+                    // Ensure bylawsText exists, if not set default
+                    if (!data.bylawsText) {
+                        data.bylawsText = DEFAULT_BYLAWS_TEXT;
+                    }
+                    setAboutData(data);
                 } else {
                     // Initialize with default data
                     const defaultData = {
@@ -88,7 +130,10 @@ function AboutPageEditor() {
                             "मानवीय संवेदना",
                             "त्वरित सहायता"
                         ],
-                        pdfUrl: "/documents/laws.pdf",
+                        // Default bylaws data
+                        bylawsText: DEFAULT_BYLAWS_TEXT,
+                        bylawsImage: "/images/bylaws-placeholder.jpg",
+                        // End default bylaws data
                         registrationDetails: {
                             number: "Regd. No. 49/2025/Jewar",
                             upi: "UPI: 9999767640m@pnb",
@@ -154,7 +199,12 @@ function AboutPageEditor() {
                 const docRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$firebase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], "aboutPage", "main");
                 const unsubscribe = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["onSnapshot"])(docRef, (docSnap)=>{
                     if (docSnap.exists()) {
-                        setAboutData(docSnap.data());
+                        const data = docSnap.data();
+                        // Ensure bylawsText exists, if not set default
+                        if (!data.bylawsText) {
+                            data.bylawsText = DEFAULT_BYLAWS_TEXT;
+                        }
+                        setAboutData(data);
                     }
                 }, (error)=>{
                     console.error("Error in about page listener:", error);
@@ -171,6 +221,7 @@ function AboutPageEditor() {
             unsubscribe();
             if (bannerPreviewUrl) URL.revokeObjectURL(bannerPreviewUrl);
             if (galleryPreviewUrl) URL.revokeObjectURL(galleryPreviewUrl);
+            if (bylawsPreviewUrl) URL.revokeObjectURL(bylawsPreviewUrl);
         };
     }, []);
     // Upload image to Firebase Storage
@@ -225,58 +276,6 @@ function AboutPageEditor() {
             setTimeout(()=>setUploadProgress(0), 1000);
         }
     };
-    // Upload PDF to Firebase Storage
-    const uploadPdfToFirebaseStorage = async (file, existingPdfPath)=>{
-        setUploading(true);
-        setUploadProgress(0);
-        setError(null);
-        try {
-            if (file.type !== "application/pdf") {
-                throw new Error("Please select a PDF file");
-            }
-            if (file.size > 10 * 1024 * 1024) {
-                throw new Error("PDF size should be less than 10MB");
-            }
-            const progressInterval = setInterval(()=>{
-                setUploadProgress((prev)=>{
-                    if (prev >= 90) {
-                        clearInterval(progressInterval);
-                        return 90;
-                    }
-                    return prev + 10;
-                });
-            }, 200);
-            const timestamp = Date.now();
-            const randomString = Math.random().toString(36).substring(2, 15);
-            const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
-            const fileName = `${timestamp}_${randomString}_${sanitizedName}`;
-            const storagePath = `documents/${fileName}`;
-            const storageRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$node$2d$esm$2f$index$2e$node$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ref"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$firebase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["storage"], storagePath);
-            const snapshot = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$node$2d$esm$2f$index$2e$node$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["uploadBytes"])(storageRef, file);
-            const downloadURL = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$node$2d$esm$2f$index$2e$node$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getDownloadURL"])(snapshot.ref);
-            clearInterval(progressInterval);
-            setUploadProgress(100);
-            if (existingPdfPath && existingPdfPath !== storagePath) {
-                try {
-                    const oldPdfRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$node$2d$esm$2f$index$2e$node$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ref"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$firebase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["storage"], existingPdfPath);
-                    await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$node$2d$esm$2f$index$2e$node$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["deleteObject"])(oldPdfRef);
-                } catch (deleteError) {
-                    console.warn("Could not delete old PDF:", deleteError);
-                }
-            }
-            await new Promise((resolve)=>setTimeout(resolve, 500));
-            return {
-                url: downloadURL,
-                path: storagePath
-            };
-        } catch (error) {
-            console.error("Error uploading PDF:", error);
-            throw new Error(`Failed to upload PDF: ${error.message || "Unknown error"}`);
-        } finally{
-            setUploading(false);
-            setTimeout(()=>setUploadProgress(0), 1000);
-        }
-    };
     // Update about page data
     const updateAboutData = async (updates)=>{
         if (!aboutData) return;
@@ -324,24 +323,51 @@ function AboutPageEditor() {
             setUploading(false);
         }
     };
-    // Handle PDF upload
-    const handlePdfUpload = async ()=>{
-        if (!pdfFile || !aboutData) return;
+    // Handle bylaws image upload
+    const handleBylawsImageUpload = async ()=>{
+        if (!bylawsImageFile || !aboutData) return;
         try {
             setUploading(true);
             setError(null);
-            const pdfData = await uploadPdfToFirebaseStorage(pdfFile, aboutData.pdfPath);
+            const imageData = await uploadImageToFirebaseStorage(bylawsImageFile, aboutData.bylawsImagePath, "about-page/bylaws");
             await updateAboutData({
-                pdfUrl: pdfData.url,
-                pdfPath: pdfData.path
+                bylawsImage: imageData.url,
+                bylawsImagePath: imageData.path
             });
-            setPdfFile(null);
-            setSuccess("✅ PDF document updated successfully!");
+            setBylawsImageFile(null);
+            if (bylawsPreviewUrl) {
+                URL.revokeObjectURL(bylawsPreviewUrl);
+                setBylawsPreviewUrl(null);
+            }
+            setSuccess("✅ Bylaws image updated successfully!");
             setTimeout(()=>setSuccess(null), 3000);
         } catch (err) {
-            setError(`Failed to upload PDF: ${err.message}`);
+            setError(`Failed to upload bylaws image: ${err.message}`);
         } finally{
             setUploading(false);
+        }
+    };
+    // Remove bylaws image
+    const handleRemoveBylawsImage = async ()=>{
+        if (!aboutData) return;
+        if (!confirm("Are you sure you want to remove the bylaws image?")) return;
+        try {
+            if (aboutData.bylawsImagePath) {
+                try {
+                    const imageRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$node$2d$esm$2f$index$2e$node$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ref"])(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$firebase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["storage"], aboutData.bylawsImagePath);
+                    await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$node$2d$esm$2f$index$2e$node$2e$esm$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["deleteObject"])(imageRef);
+                } catch (err) {
+                    console.warn("Could not delete bylaws image from storage:", err);
+                }
+            }
+            await updateAboutData({
+                bylawsImage: "",
+                bylawsImagePath: ""
+            });
+            setSuccess("✅ Bylaws image removed successfully!");
+            setTimeout(()=>setSuccess(null), 3000);
+        } catch (err) {
+            setError(`Failed to remove bylaws image: ${err.message}`);
         }
     };
     // Handle gallery image addition
@@ -582,29 +608,24 @@ function AboutPageEditor() {
         const file = e.target.files?.[0];
         if (!file) return;
         setError(null);
-        if (type === "pdf") {
-            if (file.type !== "application/pdf") {
-                setError("Please select a PDF file");
-                return;
-            }
-            setPdfFile(file);
-        } else {
-            if (!file.type.startsWith("image/")) {
-                setError("Please select an image file");
-                return;
-            }
-            if (file.size > 5 * 1024 * 1024) {
-                setError("Image size should be less than 5MB");
-                return;
-            }
-            const objectUrl = URL.createObjectURL(file);
-            if (type === "banner") {
-                setBannerImageFile(file);
-                setBannerPreviewUrl(objectUrl);
-            } else if (type === "gallery") {
-                setGalleryImageFile(file);
-                setGalleryPreviewUrl(objectUrl);
-            }
+        if (!file.type.startsWith("image/")) {
+            setError("Please select an image file");
+            return;
+        }
+        if (file.size > 5 * 1024 * 1024) {
+            setError("Image size should be less than 5MB");
+            return;
+        }
+        const objectUrl = URL.createObjectURL(file);
+        if (type === "banner") {
+            setBannerImageFile(file);
+            setBannerPreviewUrl(objectUrl);
+        } else if (type === "gallery") {
+            setGalleryImageFile(file);
+            setGalleryPreviewUrl(objectUrl);
+        } else if (type === "bylaws") {
+            setBylawsImageFile(file);
+            setBylawsPreviewUrl(objectUrl);
         }
     };
     // Icon options for Hindi sections
@@ -645,12 +666,12 @@ function AboutPageEditor() {
                 className: "animate-spin rounded-full h-12 w-12 border-b-2 border-black"
             }, void 0, false, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 778,
+                lineNumber: 800,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-            lineNumber: 777,
+            lineNumber: 799,
             columnNumber: 7
         }, this);
     }
@@ -662,12 +683,12 @@ function AboutPageEditor() {
                 children: "Failed to load about page data"
             }, void 0, false, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 786,
+                lineNumber: 808,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-            lineNumber: 785,
+            lineNumber: 807,
             columnNumber: 7
         }, this);
     }
@@ -682,7 +703,7 @@ function AboutPageEditor() {
                         size: 20
                     }, void 0, false, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 796,
+                        lineNumber: 818,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -690,7 +711,7 @@ function AboutPageEditor() {
                         children: error
                     }, void 0, false, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 797,
+                        lineNumber: 819,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -700,18 +721,18 @@ function AboutPageEditor() {
                             size: 18
                         }, void 0, false, {
                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                            lineNumber: 799,
+                            lineNumber: 821,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 798,
+                        lineNumber: 820,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 795,
+                lineNumber: 817,
                 columnNumber: 9
             }, this),
             success && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -722,7 +743,7 @@ function AboutPageEditor() {
                         size: 20
                     }, void 0, false, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 806,
+                        lineNumber: 828,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -730,7 +751,7 @@ function AboutPageEditor() {
                         children: success
                     }, void 0, false, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 807,
+                        lineNumber: 829,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -740,18 +761,18 @@ function AboutPageEditor() {
                             size: 18
                         }, void 0, false, {
                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                            lineNumber: 809,
+                            lineNumber: 831,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 808,
+                        lineNumber: 830,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 805,
+                lineNumber: 827,
                 columnNumber: 9
             }, this),
             uploading && uploadProgress > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -767,14 +788,14 @@ function AboutPageEditor() {
                                         size: 16
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 819,
+                                        lineNumber: 841,
                                         columnNumber: 15
                                     }, this),
                                     uploadProgress < 100 ? "Uploading..." : "Processing..."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 818,
+                                lineNumber: 840,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -785,13 +806,13 @@ function AboutPageEditor() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 822,
+                                lineNumber: 844,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 817,
+                        lineNumber: 839,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -803,18 +824,18 @@ function AboutPageEditor() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                            lineNumber: 825,
+                            lineNumber: 847,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 824,
+                        lineNumber: 846,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 816,
+                lineNumber: 838,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -843,9 +864,9 @@ function AboutPageEditor() {
                             icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__["Globe"]
                         },
                         {
-                            id: "pdf",
-                            label: "PDF Document",
-                            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__File$3e$__["File"]
+                            id: "bylaws",
+                            label: "Bylaws",
+                            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$pen$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileEdit$3e$__["FileEdit"]
                         },
                         {
                             id: "details",
@@ -860,30 +881,30 @@ function AboutPageEditor() {
                                     size: 16
                                 }, void 0, false, {
                                     fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                    lineNumber: 853,
+                                    lineNumber: 875,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: section.label
                                 }, void 0, false, {
                                     fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                    lineNumber: 854,
+                                    lineNumber: 876,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, section.id, true, {
                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                            lineNumber: 844,
+                            lineNumber: 866,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                    lineNumber: 835,
+                    lineNumber: 857,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 834,
+                lineNumber: 856,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -894,7 +915,7 @@ function AboutPageEditor() {
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 861,
+                lineNumber: 883,
                 columnNumber: 7
             }, this),
             activeSection === "banner" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -905,7 +926,7 @@ function AboutPageEditor() {
                         children: "Banner Settings"
                     }, void 0, false, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 868,
+                        lineNumber: 890,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -918,7 +939,7 @@ function AboutPageEditor() {
                                         children: "Current Banner"
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 873,
+                                        lineNumber: 895,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -931,23 +952,23 @@ function AboutPageEditor() {
                                                 className: "w-full h-full object-cover"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 876,
+                                                lineNumber: 898,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                            lineNumber: 875,
+                                            lineNumber: 897,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 874,
+                                        lineNumber: 896,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 872,
+                                lineNumber: 894,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -957,7 +978,7 @@ function AboutPageEditor() {
                                         children: "Upload New Banner"
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 887,
+                                        lineNumber: 909,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -970,7 +991,7 @@ function AboutPageEditor() {
                                                         children: "Banner Image *"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 890,
+                                                        lineNumber: 912,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -983,7 +1004,7 @@ function AboutPageEditor() {
                                                                         size: 18
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 897,
+                                                                        lineNumber: 919,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     uploading ? "Uploading..." : "Select Image",
@@ -995,13 +1016,13 @@ function AboutPageEditor() {
                                                                         disabled: uploading
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 899,
+                                                                        lineNumber: 921,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 894,
+                                                                lineNumber: 916,
                                                                 columnNumber: 21
                                                             }, this),
                                                             bannerImageFile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1015,7 +1036,7 @@ function AboutPageEditor() {
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 909,
+                                                                        lineNumber: 931,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1032,30 +1053,30 @@ function AboutPageEditor() {
                                                                             size: 16
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                            lineNumber: 923,
+                                                                            lineNumber: 945,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 912,
+                                                                        lineNumber: 934,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 908,
+                                                                lineNumber: 930,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 893,
+                                                        lineNumber: 915,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 889,
+                                                lineNumber: 911,
                                                 columnNumber: 17
                                             }, this),
                                             bannerPreviewUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1065,7 +1086,7 @@ function AboutPageEditor() {
                                                         children: "Preview:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 932,
+                                                        lineNumber: 954,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1078,23 +1099,23 @@ function AboutPageEditor() {
                                                                 className: "w-full h-full object-cover"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 935,
+                                                                lineNumber: 957,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                            lineNumber: 934,
+                                                            lineNumber: 956,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 933,
+                                                        lineNumber: 955,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 931,
+                                                lineNumber: 953,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1104,31 +1125,31 @@ function AboutPageEditor() {
                                                 children: uploading ? "Uploading..." : "Update Banner"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 945,
+                                                lineNumber: 967,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 888,
+                                        lineNumber: 910,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 886,
+                                lineNumber: 908,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 870,
+                        lineNumber: 892,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 867,
+                lineNumber: 889,
                 columnNumber: 9
             }, this),
             activeSection === "content" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1142,7 +1163,7 @@ function AboutPageEditor() {
                                 children: "Hindi Content"
                             }, void 0, false, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 967,
+                                lineNumber: 989,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1155,7 +1176,7 @@ function AboutPageEditor() {
                                                 children: "Main Title (Hindi)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 972,
+                                                lineNumber: 994,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1169,13 +1190,13 @@ function AboutPageEditor() {
                                                 disabled: saving
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 975,
+                                                lineNumber: 997,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 971,
+                                        lineNumber: 993,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1185,7 +1206,7 @@ function AboutPageEditor() {
                                                 children: "Subtitle (Hindi)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 987,
+                                                lineNumber: 1009,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1199,13 +1220,13 @@ function AboutPageEditor() {
                                                 disabled: saving
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 990,
+                                                lineNumber: 1012,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 986,
+                                        lineNumber: 1008,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1215,7 +1236,7 @@ function AboutPageEditor() {
                                                 children: "Mission Statement (Hindi)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1002,
+                                                lineNumber: 1024,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1229,13 +1250,13 @@ function AboutPageEditor() {
                                                 disabled: saving
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1005,
+                                                lineNumber: 1027,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1001,
+                                        lineNumber: 1023,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1245,7 +1266,7 @@ function AboutPageEditor() {
                                                 children: "Mission Description (Hindi)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1017,
+                                                lineNumber: 1039,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1259,13 +1280,13 @@ function AboutPageEditor() {
                                                 disabled: saving
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1020,
+                                                lineNumber: 1042,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1016,
+                                        lineNumber: 1038,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1278,7 +1299,7 @@ function AboutPageEditor() {
                                                         children: "Hindi Work Sections"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1033,
+                                                        lineNumber: 1055,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1289,13 +1310,13 @@ function AboutPageEditor() {
                                                         children: "Add New Section"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1034,
+                                                        lineNumber: 1056,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1032,
+                                                lineNumber: 1054,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1314,7 +1335,7 @@ function AboutPageEditor() {
                                                                                 children: iconOptions.find((ico)=>ico.value === section.icon)?.label
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                                lineNumber: 1047,
+                                                                                lineNumber: 1069,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1322,13 +1343,13 @@ function AboutPageEditor() {
                                                                                 children: section.title
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                                lineNumber: 1048,
+                                                                                lineNumber: 1070,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1046,
+                                                                        lineNumber: 1068,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1338,18 +1359,18 @@ function AboutPageEditor() {
                                                                             size: 16
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                            lineNumber: 1054,
+                                                                            lineNumber: 1076,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1050,
+                                                                        lineNumber: 1072,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1045,
+                                                                lineNumber: 1067,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1362,7 +1383,7 @@ function AboutPageEditor() {
                                                                                 children: "•"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                                lineNumber: 1061,
+                                                                                lineNumber: 1083,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1370,29 +1391,29 @@ function AboutPageEditor() {
                                                                                 children: point
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                                lineNumber: 1062,
+                                                                                lineNumber: 1084,
                                                                                 columnNumber: 29
                                                                             }, this)
                                                                         ]
                                                                     }, pointIndex, true, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1060,
+                                                                        lineNumber: 1082,
                                                                         columnNumber: 27
                                                                     }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1058,
+                                                                lineNumber: 1080,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, index, true, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1044,
+                                                        lineNumber: 1066,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1042,
+                                                lineNumber: 1064,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1404,7 +1425,7 @@ function AboutPageEditor() {
                                                         children: "Add New Hindi Section"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1072,
+                                                        lineNumber: 1094,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1417,7 +1438,7 @@ function AboutPageEditor() {
                                                                         children: "Section Title"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1076,
+                                                                        lineNumber: 1098,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1431,13 +1452,13 @@ function AboutPageEditor() {
                                                                         placeholder: "Enter section title in Hindi"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1079,
+                                                                        lineNumber: 1101,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1075,
+                                                                lineNumber: 1097,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1447,7 +1468,7 @@ function AboutPageEditor() {
                                                                         children: "Icon"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1089,
+                                                                        lineNumber: 1111,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1462,18 +1483,18 @@ function AboutPageEditor() {
                                                                                 children: option.label
                                                                             }, option.value, false, {
                                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                                lineNumber: 1098,
+                                                                                lineNumber: 1120,
                                                                                 columnNumber: 27
                                                                             }, this))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1092,
+                                                                        lineNumber: 1114,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1088,
+                                                                lineNumber: 1110,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1483,7 +1504,7 @@ function AboutPageEditor() {
                                                                         children: "Points (One per line)"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1106,
+                                                                        lineNumber: 1128,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1497,13 +1518,13 @@ function AboutPageEditor() {
                                                                         placeholder: "Enter each point on a new line"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1109,
+                                                                        lineNumber: 1131,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1105,
+                                                                lineNumber: 1127,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1513,37 +1534,37 @@ function AboutPageEditor() {
                                                                 children: "Add Section"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1121,
+                                                                lineNumber: 1143,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1074,
+                                                        lineNumber: 1096,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1071,
+                                                lineNumber: 1093,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1031,
+                                        lineNumber: 1053,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 969,
+                                lineNumber: 991,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 966,
+                        lineNumber: 988,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1554,7 +1575,7 @@ function AboutPageEditor() {
                                 children: "English Content"
                             }, void 0, false, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1140,
+                                lineNumber: 1162,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1567,7 +1588,7 @@ function AboutPageEditor() {
                                                 children: "Mission (English)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1145,
+                                                lineNumber: 1167,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1581,13 +1602,13 @@ function AboutPageEditor() {
                                                 disabled: saving
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1148,
+                                                lineNumber: 1170,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1144,
+                                        lineNumber: 1166,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1597,7 +1618,7 @@ function AboutPageEditor() {
                                                 children: "Vision (English)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1160,
+                                                lineNumber: 1182,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1611,13 +1632,13 @@ function AboutPageEditor() {
                                                 disabled: saving
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1163,
+                                                lineNumber: 1185,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1159,
+                                        lineNumber: 1181,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1630,7 +1651,7 @@ function AboutPageEditor() {
                                                         children: "Governance & Structure"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1176,
+                                                        lineNumber: 1198,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1641,13 +1662,13 @@ function AboutPageEditor() {
                                                         children: "Add New Item"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1177,
+                                                        lineNumber: 1199,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1175,
+                                                lineNumber: 1197,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1663,7 +1684,7 @@ function AboutPageEditor() {
                                                                         children: item.title
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1189,
+                                                                        lineNumber: 1211,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1673,18 +1694,18 @@ function AboutPageEditor() {
                                                                             size: 16
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                            lineNumber: 1194,
+                                                                            lineNumber: 1216,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1190,
+                                                                        lineNumber: 1212,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1188,
+                                                                lineNumber: 1210,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1692,18 +1713,18 @@ function AboutPageEditor() {
                                                                 children: item.description
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1197,
+                                                                lineNumber: 1219,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, index, true, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1187,
+                                                        lineNumber: 1209,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1185,
+                                                lineNumber: 1207,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1715,7 +1736,7 @@ function AboutPageEditor() {
                                                         children: "Add Governance Item"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1204,
+                                                        lineNumber: 1226,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1728,7 +1749,7 @@ function AboutPageEditor() {
                                                                         children: "Title"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1208,
+                                                                        lineNumber: 1230,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1742,13 +1763,13 @@ function AboutPageEditor() {
                                                                         placeholder: "Enter title"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1211,
+                                                                        lineNumber: 1233,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1207,
+                                                                lineNumber: 1229,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1758,7 +1779,7 @@ function AboutPageEditor() {
                                                                         children: "Description"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1221,
+                                                                        lineNumber: 1243,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1772,13 +1793,13 @@ function AboutPageEditor() {
                                                                         placeholder: "Enter description"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1224,
+                                                                        lineNumber: 1246,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1220,
+                                                                lineNumber: 1242,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1788,43 +1809,43 @@ function AboutPageEditor() {
                                                                 children: "Add Governance Item"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1233,
+                                                                lineNumber: 1255,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1206,
+                                                        lineNumber: 1228,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1203,
+                                                lineNumber: 1225,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1174,
+                                        lineNumber: 1196,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1142,
+                                lineNumber: 1164,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 1139,
+                        lineNumber: 1161,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 964,
+                lineNumber: 986,
                 columnNumber: 9
             }, this),
             activeSection === "gallery" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1838,7 +1859,7 @@ function AboutPageEditor() {
                                 children: "Add Gallery Image"
                             }, void 0, false, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1257,
+                                lineNumber: 1279,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1854,7 +1875,7 @@ function AboutPageEditor() {
                                                         children: "Image *"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1262,
+                                                        lineNumber: 1284,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1867,7 +1888,7 @@ function AboutPageEditor() {
                                                                         size: 18
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1269,
+                                                                        lineNumber: 1291,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     uploading ? "Uploading..." : "Select Image",
@@ -1879,13 +1900,13 @@ function AboutPageEditor() {
                                                                         disabled: uploading
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1271,
+                                                                        lineNumber: 1293,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1266,
+                                                                lineNumber: 1288,
                                                                 columnNumber: 21
                                                             }, this),
                                                             galleryImageFile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1899,7 +1920,7 @@ function AboutPageEditor() {
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1281,
+                                                                        lineNumber: 1303,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1916,30 +1937,30 @@ function AboutPageEditor() {
                                                                             size: 16
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                            lineNumber: 1295,
+                                                                            lineNumber: 1317,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1284,
+                                                                        lineNumber: 1306,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1280,
+                                                                lineNumber: 1302,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1265,
+                                                        lineNumber: 1287,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1261,
+                                                lineNumber: 1283,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1949,7 +1970,7 @@ function AboutPageEditor() {
                                                         children: "Alt Text *"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1303,
+                                                        lineNumber: 1325,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1964,13 +1985,13 @@ function AboutPageEditor() {
                                                         disabled: uploading
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1306,
+                                                        lineNumber: 1328,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1302,
+                                                lineNumber: 1324,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1980,7 +2001,7 @@ function AboutPageEditor() {
                                                         children: "Category"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1317,
+                                                        lineNumber: 1339,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1995,13 +2016,13 @@ function AboutPageEditor() {
                                                         disabled: uploading
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1320,
+                                                        lineNumber: 1342,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1316,
+                                                lineNumber: 1338,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2011,13 +2032,13 @@ function AboutPageEditor() {
                                                 children: uploading ? "Uploading..." : "Add to Gallery"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1330,
+                                                lineNumber: 1352,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1260,
+                                        lineNumber: 1282,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2027,7 +2048,7 @@ function AboutPageEditor() {
                                                 children: "Preview"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1345,
+                                                lineNumber: 1367,
                                                 columnNumber: 17
                                             }, this),
                                             galleryPreviewUrl ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2041,12 +2062,12 @@ function AboutPageEditor() {
                                                             className: "w-full h-full object-cover"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                            lineNumber: 1349,
+                                                            lineNumber: 1371,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1348,
+                                                        lineNumber: 1370,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2057,7 +2078,7 @@ function AboutPageEditor() {
                                                                 children: newGalleryImage.alt || "No alt text"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1356,
+                                                                lineNumber: 1378,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2068,19 +2089,19 @@ function AboutPageEditor() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1357,
+                                                                lineNumber: 1379,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1355,
+                                                        lineNumber: 1377,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1347,
+                                                lineNumber: 1369,
                                                 columnNumber: 19
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "border-2 border-dashed border-gray-300 rounded-lg h-48 flex items-center justify-center",
@@ -2092,7 +2113,7 @@ function AboutPageEditor() {
                                                             size: 32
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                            lineNumber: 1363,
+                                                            lineNumber: 1385,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2100,36 +2121,36 @@ function AboutPageEditor() {
                                                             children: "Image preview will appear here"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                            lineNumber: 1364,
+                                                            lineNumber: 1386,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                    lineNumber: 1362,
+                                                    lineNumber: 1384,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1361,
+                                                lineNumber: 1383,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1344,
+                                        lineNumber: 1366,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1259,
+                                lineNumber: 1281,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 1256,
+                        lineNumber: 1278,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2143,7 +2164,7 @@ function AboutPageEditor() {
                                         children: "Gallery Images"
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1375,
+                                        lineNumber: 1397,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2154,13 +2175,13 @@ function AboutPageEditor() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1376,
+                                        lineNumber: 1398,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1374,
+                                lineNumber: 1396,
                                 columnNumber: 13
                             }, this),
                             aboutData.galleryImages.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2171,20 +2192,20 @@ function AboutPageEditor() {
                                         size: 32
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1383,
+                                        lineNumber: 1405,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "No gallery images yet. Add your first image above."
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1384,
+                                        lineNumber: 1406,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1382,
+                                lineNumber: 1404,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4",
@@ -2199,12 +2220,12 @@ function AboutPageEditor() {
                                                     className: "w-full h-full object-cover"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                    lineNumber: 1391,
+                                                    lineNumber: 1413,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1390,
+                                                lineNumber: 1412,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2221,7 +2242,7 @@ function AboutPageEditor() {
                                                                         children: image.alt
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1400,
+                                                                        lineNumber: 1422,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2232,13 +2253,13 @@ function AboutPageEditor() {
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1401,
+                                                                        lineNumber: 1423,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1399,
+                                                                lineNumber: 1421,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2253,12 +2274,12 @@ function AboutPageEditor() {
                                                                             size: 14
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                            lineNumber: 1410,
+                                                                            lineNumber: 1432,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1404,
+                                                                        lineNumber: 1426,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2270,12 +2291,12 @@ function AboutPageEditor() {
                                                                             size: 14
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                            lineNumber: 1418,
+                                                                            lineNumber: 1440,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1412,
+                                                                        lineNumber: 1434,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2286,24 +2307,24 @@ function AboutPageEditor() {
                                                                             size: 14
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                            lineNumber: 1425,
+                                                                            lineNumber: 1447,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1420,
+                                                                        lineNumber: 1442,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1403,
+                                                                lineNumber: 1425,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1398,
+                                                        lineNumber: 1420,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2314,36 +2335,36 @@ function AboutPageEditor() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1429,
+                                                        lineNumber: 1451,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1397,
+                                                lineNumber: 1419,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, image.id, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1389,
+                                        lineNumber: 1411,
                                         columnNumber: 19
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1387,
+                                lineNumber: 1409,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 1373,
+                        lineNumber: 1395,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 1254,
+                lineNumber: 1276,
                 columnNumber: 9
             }, this),
             activeSection === "mission" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2357,7 +2378,7 @@ function AboutPageEditor() {
                                 children: "Commitments (Hindi)"
                             }, void 0, false, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1444,
+                                lineNumber: 1466,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2373,7 +2394,7 @@ function AboutPageEditor() {
                                                         children: commitment
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1450,
+                                                        lineNumber: 1472,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2383,23 +2404,23 @@ function AboutPageEditor() {
                                                             size: 14
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                            lineNumber: 1455,
+                                                            lineNumber: 1477,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1451,
+                                                        lineNumber: 1473,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, index, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1449,
+                                                lineNumber: 1471,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1447,
+                                        lineNumber: 1469,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2413,7 +2434,7 @@ function AboutPageEditor() {
                                                 placeholder: "Add new commitment"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1462,
+                                                lineNumber: 1484,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2423,25 +2444,25 @@ function AboutPageEditor() {
                                                 children: "Add"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1469,
+                                                lineNumber: 1491,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1461,
+                                        lineNumber: 1483,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1446,
+                                lineNumber: 1468,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 1443,
+                        lineNumber: 1465,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2452,7 +2473,7 @@ function AboutPageEditor() {
                                 children: "Core Values (English)"
                             }, void 0, false, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1482,
+                                lineNumber: 1504,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2471,7 +2492,7 @@ function AboutPageEditor() {
                                                                 size: 16
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1489,
+                                                                lineNumber: 1511,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2479,13 +2500,13 @@ function AboutPageEditor() {
                                                                 children: value
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1490,
+                                                                lineNumber: 1512,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1488,
+                                                        lineNumber: 1510,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2495,23 +2516,23 @@ function AboutPageEditor() {
                                                             size: 16
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                            lineNumber: 1496,
+                                                            lineNumber: 1518,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1492,
+                                                        lineNumber: 1514,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, index, true, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1487,
+                                                lineNumber: 1509,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1485,
+                                        lineNumber: 1507,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2525,7 +2546,7 @@ function AboutPageEditor() {
                                                 placeholder: "Add new core value"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1503,
+                                                lineNumber: 1525,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2535,235 +2556,101 @@ function AboutPageEditor() {
                                                 children: "Add"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1510,
+                                                lineNumber: 1532,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1502,
+                                        lineNumber: 1524,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1484,
+                                lineNumber: 1506,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 1481,
+                        lineNumber: 1503,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 1441,
+                lineNumber: 1463,
                 columnNumber: 9
             }, this),
-            activeSection === "pdf" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-white rounded-xl shadow-sm border border-gray-200 p-6",
+            activeSection === "bylaws" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "space-y-6",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-xl font-bold text-gray-900 mb-4",
-                        children: "PDF Document"
-                    }, void 0, false, {
-                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 1526,
-                        columnNumber: 11
-                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid grid-cols-1 lg:grid-cols-2 gap-6",
+                        className: "bg-white rounded-xl shadow-sm border border-gray-200 p-6",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center justify-between mb-4",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-semibold text-gray-700 mb-2",
-                                        children: "Current PDF"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        className: "text-xl font-bold text-gray-900",
+                                        children: "Bylaws Content"
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1531,
+                                        lineNumber: 1551,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "border border-gray-200 rounded-lg p-4",
+                                        className: "flex items-center gap-2 text-sm text-gray-600",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex items-center gap-3",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__File$3e$__["File"], {
-                                                        className: "text-red-500",
-                                                        size: 24
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1534,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "font-medium",
-                                                                children: "Foundation ByLaws"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1536,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-sm text-gray-600",
-                                                                children: aboutData.pdfUrl ? "PDF is uploaded" : "No PDF uploaded"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1537,
-                                                                columnNumber: 21
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1535,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$pen$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileEdit$3e$__["FileEdit"], {
+                                                size: 16
+                                            }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1533,
+                                                lineNumber: 1553,
                                                 columnNumber: 17
                                             }, this),
-                                            aboutData.pdfUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: aboutData.pdfUrl,
-                                                target: "_blank",
-                                                rel: "noopener noreferrer",
-                                                className: "inline-flex items-center gap-2 mt-3 text-blue-600 hover:text-blue-800",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$download$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Download$3e$__["Download"], {
-                                                        size: 16
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1549,
-                                                        columnNumber: 21
-                                                    }, this),
-                                                    "View/Download PDF"
-                                                ]
-                                            }, void 0, true, {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: "Edit bylaws text"
+                                            }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1543,
-                                                columnNumber: 19
+                                                lineNumber: 1554,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1532,
+                                        lineNumber: 1552,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1530,
+                                lineNumber: 1550,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "space-y-4",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-semibold text-gray-700 mb-2",
-                                        children: "Upload New PDF"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1558,
-                                        columnNumber: 15
-                                    }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "space-y-4",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center justify-between mb-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "block text-sm font-medium text-gray-700 mb-2",
-                                                        children: "PDF File *"
+                                                        className: "block text-sm font-medium text-gray-700",
+                                                        children: "Bylaws Text (Supports markdown-like formatting)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
                                                         lineNumber: 1561,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "flex items-center gap-4",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                                className: `flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-colors ${uploading ? "bg-gray-400 cursor-not-allowed" : "bg-black text-white hover:bg-gray-800"}`,
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__["Upload"], {
-                                                                        size: 18
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1568,
-                                                                        columnNumber: 23
-                                                                    }, this),
-                                                                    uploading ? "Uploading..." : "Select PDF",
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                                        type: "file",
-                                                                        accept: ".pdf",
-                                                                        onChange: (e)=>handleFileChange(e, "pdf"),
-                                                                        className: "hidden",
-                                                                        disabled: uploading
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1570,
-                                                                        columnNumber: 23
-                                                                    }, this)
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1565,
-                                                                columnNumber: 21
-                                                            }, this),
-                                                            pdfFile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "flex items-center gap-2",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: "text-sm text-gray-600",
-                                                                        children: [
-                                                                            "Selected: ",
-                                                                            pdfFile.name
-                                                                        ]
-                                                                    }, void 0, true, {
-                                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1580,
-                                                                        columnNumber: 25
-                                                                    }, this),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                        onClick: ()=>setPdfFile(null),
-                                                                        className: "p-1 text-red-500 hover:text-red-700",
-                                                                        disabled: uploading,
-                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                                                            size: 16
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                            lineNumber: 1588,
-                                                                            columnNumber: 27
-                                                                        }, this)
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                        lineNumber: 1583,
-                                                                        columnNumber: 25
-                                                                    }, this)
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                                lineNumber: 1579,
-                                                                columnNumber: 23
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1564,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-xs text-gray-500 mt-1",
-                                                        children: "Maximum file size: 10MB"
+                                                        className: "text-xs text-gray-500",
+                                                        children: "Use **bold** for headings, 1. for numbered lists"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                        lineNumber: 1593,
+                                                        lineNumber: 1564,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
@@ -2772,14 +2659,17 @@ function AboutPageEditor() {
                                                 lineNumber: 1560,
                                                 columnNumber: 17
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                onClick: handlePdfUpload,
-                                                disabled: uploading || !pdfFile,
-                                                className: `w-full px-4 py-3 rounded-lg font-semibold transition-colors ${uploading || !pdfFile ? "bg-gray-400 cursor-not-allowed" : "bg-black text-white hover:bg-gray-800"}`,
-                                                children: uploading ? "Uploading..." : "Upload PDF"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                                value: aboutData.bylawsText || "",
+                                                onChange: (e)=>updateAboutData({
+                                                        bylawsText: e.target.value
+                                                    }),
+                                                className: "w-full h-96 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent font-mono text-sm",
+                                                placeholder: "Enter bylaws text here...",
+                                                disabled: saving
                                             }, void 0, false, {
                                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                                lineNumber: 1596,
+                                                lineNumber: 1568,
                                                 columnNumber: 17
                                             }, this)
                                         ]
@@ -2787,23 +2677,582 @@ function AboutPageEditor() {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
                                         lineNumber: 1559,
                                         columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "bg-gray-50 border border-gray-200 rounded-lg p-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                className: "font-semibold text-gray-700 mb-2",
+                                                children: "Formatting Tips:"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                lineNumber: 1578,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                                className: "text-xs text-gray-600 space-y-1",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                        children: [
+                                                            "• Use ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("code", {
+                                                                children: "**Heading**"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1580,
+                                                                columnNumber: 29
+                                                            }, this),
+                                                            " for section headings"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1580,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                        children: [
+                                                            "• Use ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("code", {
+                                                                children: "1. Point one"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1581,
+                                                                columnNumber: 29
+                                                            }, this),
+                                                            " for numbered lists"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1581,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                        children: "• Use empty lines for paragraph breaks"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1582,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                        children: "• Text will be displayed exactly as entered"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1583,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                lineNumber: 1579,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                        lineNumber: 1577,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "pt-4 border-t border-gray-200",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            onClick: ()=>updateAboutData({}),
+                                            disabled: saving,
+                                            className: "px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 disabled:bg-gray-400",
+                                            children: saving ? "Saving..." : "Save Bylaws Text"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                            lineNumber: 1588,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                        lineNumber: 1587,
+                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1557,
+                                lineNumber: 1558,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 1528,
+                        lineNumber: 1549,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "bg-white rounded-xl shadow-sm border border-gray-200 p-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "text-xl font-bold text-gray-900 mb-4",
+                                children: "Bylaws Image (Optional)"
+                            }, void 0, false, {
+                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                lineNumber: 1601,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "grid grid-cols-1 lg:grid-cols-2 gap-6",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: "font-semibold text-gray-700 mb-2",
+                                                children: "Current Image"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                lineNumber: 1606,
+                                                columnNumber: 17
+                                            }, this),
+                                            aboutData.bylawsImage ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "space-y-3",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "border border-gray-200 rounded-lg overflow-hidden",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "relative h-48 w-full bg-gray-100",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                src: aboutData.bylawsImage || "/placeholder.svg",
+                                                                alt: "Current Bylaws Image",
+                                                                className: "w-full h-full object-cover"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1611,
+                                                                columnNumber: 25
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                            lineNumber: 1610,
+                                                            columnNumber: 23
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1609,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        onClick: handleRemoveBylawsImage,
+                                                        className: "w-full px-4 py-2 bg-red-50 text-red-700 border border-red-200 rounded-lg hover:bg-red-100 transition-colors",
+                                                        children: "Remove Image"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1618,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                lineNumber: 1608,
+                                                columnNumber: 19
+                                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "border-2 border-dashed border-gray-300 rounded-lg h-48 flex items-center justify-center",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "text-center",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Image$3e$__["Image"], {
+                                                            className: "mx-auto text-gray-400 mb-2",
+                                                            size: 32
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                            lineNumber: 1628,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "text-gray-500",
+                                                            children: "No bylaws image uploaded"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                            lineNumber: 1629,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "text-xs text-gray-400 mt-1",
+                                                            children: "Image is optional"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                            lineNumber: 1630,
+                                                            columnNumber: 23
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                    lineNumber: 1627,
+                                                    columnNumber: 21
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                lineNumber: 1626,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                        lineNumber: 1605,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: "font-semibold text-gray-700 mb-2",
+                                                children: "Upload New Image"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                lineNumber: 1638,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "space-y-4",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                className: "block text-sm font-medium text-gray-700 mb-2",
+                                                                children: "Bylaws Image (Optional)"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1641,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "flex items-center gap-4",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                                        className: `flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-colors ${uploading ? "bg-gray-400 cursor-not-allowed" : "bg-black text-white hover:bg-gray-800"}`,
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__["Upload"], {
+                                                                                size: 18
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                                lineNumber: 1648,
+                                                                                columnNumber: 25
+                                                                            }, this),
+                                                                            uploading ? "Uploading..." : "Select Image",
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                                                type: "file",
+                                                                                accept: "image/*",
+                                                                                onChange: (e)=>handleFileChange(e, "bylaws"),
+                                                                                className: "hidden",
+                                                                                disabled: uploading
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                                lineNumber: 1650,
+                                                                                columnNumber: 25
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                        lineNumber: 1645,
+                                                                        columnNumber: 23
+                                                                    }, this),
+                                                                    bylawsImageFile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "flex items-center gap-2",
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                className: "text-sm text-gray-600",
+                                                                                children: [
+                                                                                    "Selected: ",
+                                                                                    bylawsImageFile.name
+                                                                                ]
+                                                                            }, void 0, true, {
+                                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                                lineNumber: 1660,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                                onClick: ()=>{
+                                                                                    setBylawsImageFile(null);
+                                                                                    if (bylawsPreviewUrl) {
+                                                                                        URL.revokeObjectURL(bylawsPreviewUrl);
+                                                                                        setBylawsPreviewUrl(null);
+                                                                                    }
+                                                                                },
+                                                                                className: "p-1 text-red-500 hover:text-red-700",
+                                                                                disabled: uploading,
+                                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                                                                    size: 16
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                                    lineNumber: 1674,
+                                                                                    columnNumber: 29
+                                                                                }, this)
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                                lineNumber: 1663,
+                                                                                columnNumber: 27
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                        lineNumber: 1659,
+                                                                        columnNumber: 25
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1644,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-xs text-gray-500 mt-1",
+                                                                children: "Recommended: Document photo or related image"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1679,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1640,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    bylawsPreviewUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-sm font-medium text-gray-700 mb-2",
+                                                                children: "Preview:"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1684,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "border border-gray-200 rounded-lg overflow-hidden",
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "relative h-32 w-full",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                        src: bylawsPreviewUrl,
+                                                                        alt: "New Bylaws Preview",
+                                                                        className: "w-full h-full object-cover"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                        lineNumber: 1687,
+                                                                        columnNumber: 27
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                    lineNumber: 1686,
+                                                                    columnNumber: 25
+                                                                }, this)
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1685,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1683,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        onClick: handleBylawsImageUpload,
+                                                        disabled: uploading || !bylawsImageFile,
+                                                        className: `w-full px-4 py-3 rounded-lg font-semibold transition-colors ${uploading || !bylawsImageFile ? "bg-gray-400 cursor-not-allowed" : "bg-black text-white hover:bg-gray-800"}`,
+                                                        children: uploading ? "Uploading..." : "Upload Bylaws Image"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1697,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "text-xs text-gray-500 p-3 bg-gray-50 rounded-lg",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "font-medium mb-1",
+                                                                children: "Note:"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1710,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                children: "• Bylaws image is optional - the page works fine without it"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1711,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                children: "• The image will be displayed alongside the bylaws text"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1712,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                children: "• Recommended size: 600x400 pixels or similar aspect ratio"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1713,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1709,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                lineNumber: 1639,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                        lineNumber: 1637,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                lineNumber: 1603,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                        lineNumber: 1600,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "bg-white rounded-xl shadow-sm border border-gray-200 p-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "text-xl font-bold text-gray-900 mb-4",
+                                children: "Preview"
+                            }, void 0, false, {
+                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                lineNumber: 1722,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "border border-gray-200 rounded-lg p-4 bg-gray-50",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "grid grid-cols-1 lg:grid-cols-3 gap-6",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "lg:col-span-2",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    className: "font-semibold text-gray-700 mb-2",
+                                                    children: "Text Preview:"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                    lineNumber: 1726,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "bg-white border border-gray-300 rounded p-4 max-h-60 overflow-y-auto",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "whitespace-pre-line text-sm",
+                                                        children: [
+                                                            (aboutData.bylawsText || "").substring(0, 500),
+                                                            "..."
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1728,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                    lineNumber: 1727,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                            lineNumber: 1725,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    className: "font-semibold text-gray-700 mb-2",
+                                                    children: "Image Preview:"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                    lineNumber: 1734,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "border border-gray-300 rounded p-4 bg-white",
+                                                    children: aboutData.bylawsImage ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "relative h-32 w-full bg-gray-100",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                            src: aboutData.bylawsImage,
+                                                            alt: "Bylaws Preview",
+                                                            className: "w-full h-full object-cover"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                            lineNumber: 1738,
+                                                            columnNumber: 25
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1737,
+                                                        columnNumber: 23
+                                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "text-center py-6 text-gray-500",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Image$3e$__["Image"], {
+                                                                className: "mx-auto mb-2 text-gray-300",
+                                                                size: 24
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1746,
+                                                                columnNumber: 25
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-sm",
+                                                                children: "No image (optional)"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                                lineNumber: 1747,
+                                                                columnNumber: 25
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                        lineNumber: 1745,
+                                                        columnNumber: 23
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                                    lineNumber: 1735,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                            lineNumber: 1733,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                    lineNumber: 1724,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                                lineNumber: 1723,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/admin/AboutPageEditor.tsx",
+                        lineNumber: 1721,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 1525,
+                lineNumber: 1547,
                 columnNumber: 9
             }, this),
             activeSection === "details" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2814,7 +3263,7 @@ function AboutPageEditor() {
                         children: "Registration Details"
                     }, void 0, false, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 1616,
+                        lineNumber: 1761,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2827,7 +3276,7 @@ function AboutPageEditor() {
                                         children: "Registration Number"
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1620,
+                                        lineNumber: 1765,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2844,13 +3293,13 @@ function AboutPageEditor() {
                                         disabled: saving
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1623,
+                                        lineNumber: 1768,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1619,
+                                lineNumber: 1764,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2860,7 +3309,7 @@ function AboutPageEditor() {
                                         children: "UPI Payment Address"
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1639,
+                                        lineNumber: 1784,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2877,13 +3326,13 @@ function AboutPageEditor() {
                                         disabled: saving
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1642,
+                                        lineNumber: 1787,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1638,
+                                lineNumber: 1783,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2893,7 +3342,7 @@ function AboutPageEditor() {
                                         children: "Helpdesk Number"
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1658,
+                                        lineNumber: 1803,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2910,13 +3359,13 @@ function AboutPageEditor() {
                                         disabled: saving
                                     }, void 0, false, {
                                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                        lineNumber: 1661,
+                                        lineNumber: 1806,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1657,
+                                lineNumber: 1802,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2928,30 +3377,30 @@ function AboutPageEditor() {
                                     children: saving ? "Saving..." : "Save All Changes"
                                 }, void 0, false, {
                                     fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                    lineNumber: 1677,
+                                    lineNumber: 1822,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                                lineNumber: 1676,
+                                lineNumber: 1821,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                        lineNumber: 1618,
+                        lineNumber: 1763,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/admin/AboutPageEditor.tsx",
-                lineNumber: 1615,
+                lineNumber: 1760,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/admin/AboutPageEditor.tsx",
-        lineNumber: 792,
+        lineNumber: 814,
         columnNumber: 5
     }, this);
 }

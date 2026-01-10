@@ -43,7 +43,8 @@ import {
   TargetIcon,
   MoveUp,
   MoveDown,
-  Hash
+  Hash,
+  Settings
 } from "lucide-react"
 
 interface ProgramItem {
@@ -52,6 +53,8 @@ interface ProgramItem {
   order: number
   active: boolean
   categoryId: string
+  createdAt?: any
+  updatedAt?: any
 }
 
 interface ProgramCategory {
@@ -61,7 +64,6 @@ interface ProgramCategory {
   icon: string
   order: number
   active: boolean
-  items: string[] // Array of item IDs
 }
 
 interface Outcome {
@@ -91,97 +93,94 @@ interface WorkPageData {
   impact: ImpactSection
 }
 
-export default function WorkPageEditor() {
-  const [workData, setWorkData] = useState<WorkPageData>({
-    headerTitle: "Our Work & Programs",
-    headerDescription: "Comprehensive initiatives across multiple sectors creating meaningful impact in communities.",
-    outcomesTitle: "Program Outcomes",
-    outcomesDescription: "Measurable results from our initiatives",
-    impactTitle: "Our Reach & Impact",
-    impactDescription: "Working across multiple states to create sustainable change in education, health, environment, and livelihood sectors.",
-    categories: [
-      {
-        id: "education",
-        title: "Education & Skill Development",
-        icon: "GraduationCap",
-        order: 0,
-        active: true,
-        items: []
-      },
-      {
-        id: "environment",
-        title: "Environmental & Agricultural",
-        icon: "Leaf",
-        order: 1,
-        active: true,
-        items: []
-      },
-      {
-        id: "social",
-        title: "Social Welfare & Health",
-        icon: "Heart",
-        order: 2,
-        active: true,
-        items: []
-      },
-      {
-        id: "community",
-        title: "Community Development",
-        icon: "Users",
-        order: 3,
-        active: true,
-        items: []
-      }
-    ],
-    outcomes: [
-      {
-        id: "programs",
-        metric: "100+",
-        label: "Training Programs",
-        detail: "Annually conducted",
-        order: 0,
-        active: true
-      },
-      {
-        id: "youth",
-        metric: "5000+",
-        label: "Youth Trained",
-        detail: "In various skills",
-        order: 1,
-        active: true
-      },
-      {
-        id: "villages",
-        metric: "50+",
-        label: "Villages Reached",
-        detail: "With initiatives",
-        order: 2,
-        active: true
-      },
-      {
-        id: "people",
-        metric: "10000+",
-        label: "People Benefited",
-        detail: "Through programs",
-        order: 3,
-        active: true
-      }
-    ],
-    impact: {
-      description: "Working across multiple states to create sustainable change in education, health, environment, and livelihood sectors.",
-      geographicReach: [
-        "Uttar Pradesh (Primary focus)",
-        "Multiple rural and urban communities",
-        "Expanding national presence"
-      ],
-      sdgs: [
-        "Quality Education (SDG 4)",
-        "Good Health & Wellness (SDG 3)",
-        "Clean Energy & Environment (SDG 7, 13)"
-      ]
+const defaultWorkData: WorkPageData = {
+  headerTitle: "Our Work & Programs",
+  headerDescription: "Comprehensive initiatives across multiple sectors creating meaningful impact in communities.",
+  outcomesTitle: "Program Outcomes",
+  outcomesDescription: "Measurable results from our initiatives",
+  impactTitle: "Our Reach & Impact",
+  impactDescription: "Working across multiple states to create sustainable change in education, health, environment, and livelihood sectors.",
+  categories: [
+    {
+      id: "education",
+      title: "Education & Skill Development",
+      icon: "GraduationCap",
+      order: 0,
+      active: true
+    },
+    {
+      id: "environment",
+      title: "Environmental & Agricultural",
+      icon: "Leaf",
+      order: 1,
+      active: true
+    },
+    {
+      id: "social",
+      title: "Social Welfare & Health",
+      icon: "Heart",
+      order: 2,
+      active: true
+    },
+    {
+      id: "community",
+      title: "Community Development",
+      icon: "Users",
+      order: 3,
+      active: true
     }
-  })
+  ],
+  outcomes: [
+    {
+      id: "programs",
+      metric: "100+",
+      label: "Training Programs",
+      detail: "Annually conducted",
+      order: 0,
+      active: true
+    },
+    {
+      id: "youth",
+      metric: "5000+",
+      label: "Youth Trained",
+      detail: "In various skills",
+      order: 1,
+      active: true
+    },
+    {
+      id: "villages",
+      metric: "50+",
+      label: "Villages Reached",
+      detail: "With initiatives",
+      order: 2,
+      active: true
+    },
+    {
+      id: "people",
+      metric: "10000+",
+      label: "People Benefited",
+      detail: "Through programs",
+      order: 3,
+      active: true
+    }
+  ],
+  impact: {
+    description: "Working across multiple states to create sustainable change in education, health, environment, and livelihood sectors.",
+    geographicReach: [
+      "Uttar Pradesh (Primary focus)",
+      "Multiple rural and urban communities",
+      "Expanding national presence"
+    ],
+    sdgs: [
+      "Quality Education (SDG 4)",
+      "Good Health & Wellness (SDG 3)",
+      "Clean Energy & Environment (SDG 7, 13)"
+    ]
+  }
+}
 
+export default function WorkPageEditor() {
+  const [workData, setWorkData] = useState<WorkPageData>(defaultWorkData)
   const [programItems, setProgramItems] = useState<ProgramItem[]>([])
   const [editingCategory, setEditingCategory] = useState<ProgramCategory | null>(null)
   const [editingOutcome, setEditingOutcome] = useState<Outcome | null>(null)
@@ -194,8 +193,7 @@ export default function WorkPageEditor() {
     title: "",
     icon: "GraduationCap",
     order: 0,
-    active: true,
-    items: []
+    active: true
   })
   const [newItem, setNewItem] = useState<ProgramItem>({
     id: "",
@@ -218,19 +216,32 @@ export default function WorkPageEditor() {
   const [success, setSuccess] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<"categories" | "items" | "outcomes" | "impact">("categories")
 
-  // Load data from Firestore
+  // Load data from Firestore with real-time listeners
   useEffect(() => {
     const loadData = async () => {
       try {
-        // Load work page data
-        const workDoc = await getDoc(doc(db, "workPage", "data"))
-        if (workDoc.exists()) {
-          setWorkData(workDoc.data() as WorkPageData)
-        }
-        
-        // Load program items
+        // Load work page data with real-time listener
+        const workDocRef = doc(db, "workPage", "data")
+        const unsubscribeWorkData = onSnapshot(workDocRef, (docSnapshot) => {
+          if (docSnapshot.exists()) {
+            const data = docSnapshot.data() as WorkPageData
+            setWorkData(data)
+          } else {
+            // If no data exists, use default data
+            setWorkData(defaultWorkData)
+            // Save default data to Firestore
+            setDoc(workDocRef, defaultWorkData)
+          }
+          setLoading(false)
+        }, (error) => {
+          console.error("Error loading work data:", error)
+          setWorkData(defaultWorkData)
+          setLoading(false)
+        })
+
+        // Load program items with real-time listener
         const itemsQuery = query(collection(db, "programItems"), orderBy("order"))
-        const unsubscribe = onSnapshot(itemsQuery, (snapshot) => {
+        const unsubscribeItems = onSnapshot(itemsQuery, (snapshot) => {
           const itemsData: ProgramItem[] = []
           snapshot.forEach((doc) => {
             itemsData.push({
@@ -239,13 +250,15 @@ export default function WorkPageEditor() {
             } as ProgramItem)
           })
           setProgramItems(itemsData)
-          setLoading(false)
         }, (error) => {
           console.error("Error loading program items:", error)
-          setLoading(false)
         })
-        
-        return () => unsubscribe()
+
+        // Cleanup listeners
+        return () => {
+          unsubscribeWorkData()
+          unsubscribeItems()
+        }
       } catch (err: any) {
         console.error("Error loading work data:", err)
         setError("Failed to load work page data")
@@ -262,30 +275,11 @@ export default function WorkPageEditor() {
     setSuccess(null)
 
     try {
-      await setDoc(doc(db, "workPage", "data"), workData, { merge: true })
+      await setDoc(doc(db, "workPage", "data"), workData)
       setSuccess("Work page data saved successfully!")
       setTimeout(() => setSuccess(null), 3000)
     } catch (err: any) {
       setError(`Failed to save data: ${err.message}`)
-    } finally {
-      setSaving(false)
-    }
-  }
-
-  const saveImpactData = async () => {
-    setSaving(true)
-    setError(null)
-    setSuccess(null)
-
-    try {
-      await setDoc(doc(db, "workPage", "data"), {
-        ...workData,
-        impact: workData.impact
-      }, { merge: true })
-      setSuccess("Impact data saved successfully!")
-      setTimeout(() => setSuccess(null), 3000)
-    } catch (err: any) {
-      setError(`Failed to save impact data: ${err.message}`)
     } finally {
       setSaving(false)
     }
@@ -305,21 +299,20 @@ export default function WorkPageEditor() {
         order: workData.categories.length
       }
 
-      const updatedCategories = [...workData.categories, category]
-      await setDoc(doc(db, "workPage", "data"), {
+      const updatedWorkData = {
         ...workData,
-        categories: updatedCategories
-      }, { merge: true })
+        categories: [...workData.categories, category]
+      }
 
-      setWorkData(prev => ({ ...prev, categories: updatedCategories }))
+      await setDoc(doc(db, "workPage", "data"), updatedWorkData)
+      setWorkData(updatedWorkData)
       setShowCategoryForm(false)
       setNewCategory({
         id: "",
         title: "",
         icon: "GraduationCap",
         order: 0,
-        active: true,
-        items: []
+        active: true
       })
       setSuccess("Category added successfully!")
       setTimeout(() => setSuccess(null), 2000)
@@ -336,12 +329,13 @@ export default function WorkPageEditor() {
         cat.id === editingCategory.id ? editingCategory : cat
       )
 
-      await setDoc(doc(db, "workPage", "data"), {
+      const updatedWorkData = {
         ...workData,
         categories: updatedCategories
-      }, { merge: true })
+      }
 
-      setWorkData(prev => ({ ...prev, categories: updatedCategories }))
+      await setDoc(doc(db, "workPage", "data"), updatedWorkData)
+      setWorkData(updatedWorkData)
       setEditingCategory(null)
       setSuccess("Category updated successfully!")
       setTimeout(() => setSuccess(null), 2000)
@@ -361,12 +355,13 @@ export default function WorkPageEditor() {
       )
 
       const updatedCategories = workData.categories.filter(cat => cat.id !== id)
-      await setDoc(doc(db, "workPage", "data"), {
+      const updatedWorkData = {
         ...workData,
         categories: updatedCategories
-      }, { merge: true })
+      }
 
-      setWorkData(prev => ({ ...prev, categories: updatedCategories }))
+      await setDoc(doc(db, "workPage", "data"), updatedWorkData)
+      setWorkData(updatedWorkData)
       setSuccess("Category deleted successfully!")
       setTimeout(() => setSuccess(null), 2000)
     } catch (err: any) {
@@ -381,34 +376,18 @@ export default function WorkPageEditor() {
     }
 
     try {
+      const itemsInCategory = programItems.filter(item => item.categoryId === newItem.categoryId)
       const itemData = {
         text: newItem.text.trim(),
-        order: programItems.filter(item => item.categoryId === newItem.categoryId).length,
+        order: itemsInCategory.length,
         active: true,
         categoryId: newItem.categoryId,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
       }
 
-      const docRef = await addDoc(collection(db, "programItems"), itemData)
+      await addDoc(collection(db, "programItems"), itemData)
       
-      // Update category with this item reference
-      const category = workData.categories.find(cat => cat.id === newItem.categoryId)
-      if (category) {
-        const updatedCategories = workData.categories.map(cat =>
-          cat.id === category.id
-            ? { ...cat, items: [...cat.items, docRef.id] }
-            : cat
-        )
-        
-        await setDoc(doc(db, "workPage", "data"), {
-          ...workData,
-          categories: updatedCategories
-        }, { merge: true })
-        
-        setWorkData(prev => ({ ...prev, categories: updatedCategories }))
-      }
-
       setShowItemForm(false)
       setNewItem({
         id: "",
@@ -446,26 +425,6 @@ export default function WorkPageEditor() {
     if (!confirm("Are you sure you want to delete this item?")) return
 
     try {
-      // Remove item reference from category
-      const item = programItems.find(item => item.id === id)
-      if (item) {
-        const category = workData.categories.find(cat => cat.id === item.categoryId)
-        if (category) {
-          const updatedCategories = workData.categories.map(cat =>
-            cat.id === category.id
-              ? { ...cat, items: cat.items.filter(itemId => itemId !== id) }
-              : cat
-          )
-          
-          await setDoc(doc(db, "workPage", "data"), {
-            ...workData,
-            categories: updatedCategories
-          }, { merge: true })
-          
-          setWorkData(prev => ({ ...prev, categories: updatedCategories }))
-        }
-      }
-
       await deleteDoc(doc(db, "programItems", id))
       setSuccess("Program item deleted successfully!")
       setTimeout(() => setSuccess(null), 2000)
@@ -488,13 +447,13 @@ export default function WorkPageEditor() {
         order: workData.outcomes.length
       }
 
-      const updatedOutcomes = [...workData.outcomes, outcome]
-      await setDoc(doc(db, "workPage", "data"), {
+      const updatedWorkData = {
         ...workData,
-        outcomes: updatedOutcomes
-      }, { merge: true })
+        outcomes: [...workData.outcomes, outcome]
+      }
 
-      setWorkData(prev => ({ ...prev, outcomes: updatedOutcomes }))
+      await setDoc(doc(db, "workPage", "data"), updatedWorkData)
+      setWorkData(updatedWorkData)
       setShowOutcomeForm(false)
       setNewOutcome({
         id: "",
@@ -519,12 +478,13 @@ export default function WorkPageEditor() {
         outcome.id === editingOutcome.id ? editingOutcome : outcome
       )
 
-      await setDoc(doc(db, "workPage", "data"), {
+      const updatedWorkData = {
         ...workData,
         outcomes: updatedOutcomes
-      }, { merge: true })
+      }
 
-      setWorkData(prev => ({ ...prev, outcomes: updatedOutcomes }))
+      await setDoc(doc(db, "workPage", "data"), updatedWorkData)
+      setWorkData(updatedWorkData)
       setEditingOutcome(null)
       setSuccess("Outcome updated successfully!")
       setTimeout(() => setSuccess(null), 2000)
@@ -538,12 +498,13 @@ export default function WorkPageEditor() {
 
     try {
       const updatedOutcomes = workData.outcomes.filter(outcome => outcome.id !== id)
-      await setDoc(doc(db, "workPage", "data"), {
+      const updatedWorkData = {
         ...workData,
         outcomes: updatedOutcomes
-      }, { merge: true })
+      }
 
-      setWorkData(prev => ({ ...prev, outcomes: updatedOutcomes }))
+      await setDoc(doc(db, "workPage", "data"), updatedWorkData)
+      setWorkData(updatedWorkData)
       setSuccess("Outcome deleted successfully!")
       setTimeout(() => setSuccess(null), 2000)
     } catch (err: any) {
@@ -551,34 +512,77 @@ export default function WorkPageEditor() {
     }
   }
 
-  const handleReorder = async (array: any[], index: number, direction: "up" | "down", type: "categories" | "outcomes" | "items") => {
+  const handleReorder = async (array: any[], index: number, direction: "up" | "down", type: "categories" | "outcomes") => {
     const newArray = [...array]
     const targetIndex = direction === "up" ? index - 1 : index + 1
 
     if (targetIndex < 0 || targetIndex >= newArray.length) return
 
+    // Swap orders
     const tempOrder = newArray[index].order
     newArray[index].order = newArray[targetIndex].order
     newArray[targetIndex].order = tempOrder
 
+    // Swap positions in array
+    [newArray[index], newArray[targetIndex]] = [newArray[targetIndex], newArray[index]]
+
     try {
       if (type === "categories") {
-        await setDoc(doc(db, "workPage", "data"), {
+        const updatedWorkData = {
           ...workData,
           categories: newArray
-        }, { merge: true })
-        setWorkData(prev => ({ ...prev, categories: newArray }))
+        }
+        await setDoc(doc(db, "workPage", "data"), updatedWorkData)
+        setWorkData(updatedWorkData)
       } else if (type === "outcomes") {
-        await setDoc(doc(db, "workPage", "data"), {
+        const updatedWorkData = {
           ...workData,
           outcomes: newArray
-        }, { merge: true })
-        setWorkData(prev => ({ ...prev, outcomes: newArray }))
+        }
+        await setDoc(doc(db, "workPage", "data"), updatedWorkData)
+        setWorkData(updatedWorkData)
       }
       setSuccess("Order updated successfully!")
       setTimeout(() => setSuccess(null), 2000)
     } catch (err: any) {
       setError(`Failed to update order: ${err.message}`)
+    }
+  }
+
+  const handleReorderItems = async (categoryId: string, index: number, direction: "up" | "down") => {
+    const categoryItems = programItems
+      .filter(item => item.categoryId === categoryId)
+      .sort((a, b) => a.order - b.order)
+    
+    if (index < 0 || index >= categoryItems.length) return
+    
+    const targetIndex = direction === "up" ? index - 1 : index + 1
+    if (targetIndex < 0 || targetIndex >= categoryItems.length) return
+    
+    const itemToMove = categoryItems[index]
+    const targetItem = categoryItems[targetIndex]
+    
+    // Swap orders
+    const tempOrder = itemToMove.order
+    itemToMove.order = targetItem.order
+    targetItem.order = tempOrder
+    
+    try {
+      // Update both items
+      await updateDoc(doc(db, "programItems", itemToMove.id), {
+        order: itemToMove.order,
+        updatedAt: serverTimestamp()
+      })
+      
+      await updateDoc(doc(db, "programItems", targetItem.id), {
+        order: targetItem.order,
+        updatedAt: serverTimestamp()
+      })
+      
+      setSuccess("Item order updated successfully!")
+      setTimeout(() => setSuccess(null), 2000)
+    } catch (err: any) {
+      setError(`Failed to update item order: ${err.message}`)
     }
   }
 
@@ -594,6 +598,7 @@ export default function WorkPageEditor() {
       case "Globe": return Globe
       case "TargetIcon": return TargetIcon
       case "BarChart": return BarChart
+      case "Settings": return Settings
       default: return GraduationCap
     }
   }
@@ -815,87 +820,82 @@ export default function WorkPageEditor() {
               </button>
             </div>
 
-            {/* Filter by category */}
-            <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Filter by Category</label>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  onClick={() => setActiveTab("items")}
-                  className="px-3 py-1 bg-black text-white rounded-lg text-sm"
-                >
-                  All Items ({programItems.length})
-                </button>
-                {workData.categories.map(category => {
-                  const count = programItems.filter(item => item.categoryId === category.id).length
+            <div className="space-y-8">
+              {workData.categories
+                .filter(category => category.active)
+                .sort((a, b) => a.order - b.order)
+                .map(category => {
+                  const categoryItems = programItems
+                    .filter(item => item.categoryId === category.id && item.active)
+                    .sort((a, b) => a.order - b.order)
+                  
                   return (
-                    <button
-                      key={category.id}
-                      onClick={() => setActiveTab("items")}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-sm hover:bg-gray-200"
-                    >
-                      {category.title} ({count})
-                    </button>
+                    <div key={category.id} className="border border-gray-200 rounded-lg p-4">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-black rounded-full"></div>
+                          <h3 className="font-semibold text-gray-900">{category.title}</h3>
+                          <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                            {categoryItems.length} items
+                          </span>
+                        </div>
+                      </div>
+                      
+                      {categoryItems.length === 0 ? (
+                        <div className="text-center py-4 text-gray-500">
+                          <p>No items in this category. Add your first item above.</p>
+                        </div>
+                      ) : (
+                        <div className="space-y-3">
+                          {categoryItems.map((item, index) => (
+                            <div key={item.id} className="flex items-center justify-between p-3 border border-gray-100 rounded-lg hover:bg-gray-50">
+                              <div className="flex items-start gap-3 flex-1">
+                                <div className="flex items-center gap-2">
+                                  <button
+                                    onClick={() => handleReorderItems(category.id, index, "up")}
+                                    className="p-1 hover:bg-gray-200 rounded disabled:opacity-30"
+                                    disabled={index === 0}
+                                    title="Move up"
+                                  >
+                                    <ArrowUp size={14} />
+                                  </button>
+                                  <button
+                                    onClick={() => handleReorderItems(category.id, index, "down")}
+                                    className="p-1 hover:bg-gray-200 rounded disabled:opacity-30"
+                                    disabled={index === categoryItems.length - 1}
+                                    title="Move down"
+                                  >
+                                    <ArrowDown size={14} />
+                                  </button>
+                                </div>
+                                <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
+                                <div className="flex-1">
+                                  <p className="text-gray-700">{item.text}</p>
+                                </div>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <button
+                                  onClick={() => setEditingItem(item)}
+                                  className="p-1 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded"
+                                  title="Edit"
+                                >
+                                  <Edit size={16} />
+                                </button>
+                                <button
+                                  onClick={() => deleteItem(item.id)}
+                                  className="p-1 text-gray-600 hover:text-red-600 hover:bg-gray-100 rounded"
+                                  title="Delete"
+                                >
+                                  <Trash2 size={16} />
+                                </button>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   )
                 })}
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              {workData.categories.map(category => {
-                const categoryItems = programItems
-                  .filter(item => item.categoryId === category.id)
-                  .sort((a, b) => a.order - b.order)
-                
-                if (categoryItems.length === 0) return null
-
-                return (
-                  <div key={category.id} className="border border-gray-200 rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-2 h-2 bg-black rounded-full"></div>
-                      <h3 className="font-semibold text-gray-900">{category.title}</h3>
-                      <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                        {categoryItems.length} items
-                      </span>
-                    </div>
-                    
-                    <div className="space-y-3 ml-4">
-                      {categoryItems.map((item, index) => (
-                        <div key={item.id} className="flex items-center justify-between p-3 border border-gray-100 rounded-lg">
-                          <div className="flex items-start gap-3">
-                            <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                              <p className="text-gray-700">{item.text}</p>
-                            </div>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <button
-                              onClick={() => setEditingItem(item)}
-                              className="p-1 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded"
-                              title="Edit"
-                            >
-                              <Edit size={16} />
-                            </button>
-                            <button
-                              onClick={() => deleteItem(item.id)}
-                              className="p-1 text-gray-600 hover:text-red-600 hover:bg-gray-100 rounded"
-                              title="Delete"
-                            >
-                              <Trash2 size={16} />
-                            </button>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )
-              })}
-
-              {programItems.length === 0 && (
-                <div className="text-center py-8 text-gray-500">
-                  <BookOpen className="mx-auto mb-2 text-gray-400" size={32} />
-                  <p>No program items yet. Add your first item above.</p>
-                </div>
-              )}
             </div>
           </div>
         </div>
@@ -1124,7 +1124,7 @@ export default function WorkPageEditor() {
 
               <div className="flex justify-end">
                 <button
-                  onClick={saveImpactData}
+                  onClick={saveWorkData}
                   disabled={saving}
                   className={`px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 ${
                     saving
@@ -1231,6 +1231,18 @@ export default function WorkPageEditor() {
                     <option value="Activity">Activity</option>
                     <option value="Globe">Global</option>
                   </select>
+                </div>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id="newCategoryActive"
+                    checked={newCategory.active}
+                    onChange={(e) => setNewCategory({...newCategory, active: e.target.checked})}
+                    className="rounded border-gray-300"
+                  />
+                  <label htmlFor="newCategoryActive" className="text-sm text-gray-700">
+                    Active (visible on page)
+                  </label>
                 </div>
               </div>
               <div className="flex justify-end gap-3 mt-8">
@@ -1355,9 +1367,12 @@ export default function WorkPageEditor() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                   >
                     <option value="">Select Category</option>
-                    {workData.categories.map(category => (
-                      <option key={category.id} value={category.id}>{category.title}</option>
-                    ))}
+                    {workData.categories
+                      .filter(cat => cat.active)
+                      .map(category => (
+                        <option key={category.id} value={category.id}>{category.title}</option>
+                      ))
+                    }
                   </select>
                 </div>
                 <div>
@@ -1369,6 +1384,18 @@ export default function WorkPageEditor() {
                     rows={3}
                     placeholder="Enter program item description"
                   />
+                </div>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id="newItemActive"
+                    checked={newItem.active}
+                    onChange={(e) => setNewItem({...newItem, active: e.target.checked})}
+                    className="rounded border-gray-300"
+                  />
+                  <label htmlFor="newItemActive" className="text-sm text-gray-700">
+                    Active (visible on page)
+                  </label>
                 </div>
               </div>
               <div className="flex justify-end gap-3 mt-8">
@@ -1507,6 +1534,18 @@ export default function WorkPageEditor() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     placeholder="e.g., Annually conducted"
                   />
+                </div>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id="newOutcomeActive"
+                    checked={newOutcome.active}
+                    onChange={(e) => setNewOutcome({...newOutcome, active: e.target.checked})}
+                    className="rounded border-gray-300"
+                  />
+                  <label htmlFor="newOutcomeActive" className="text-sm text-gray-700">
+                    Active (visible on page)
+                  </label>
                 </div>
               </div>
               <div className="flex justify-end gap-3 mt-8">

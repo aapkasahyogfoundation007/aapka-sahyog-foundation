@@ -4,7 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { useEffect, useState } from "react"
 import { db } from "@/lib/firebase"
-import { doc, getDoc, collection, query, orderBy, onSnapshot } from "firebase/firestore"
+import { doc, getDoc, setDoc, collection, query, orderBy, onSnapshot } from "firebase/firestore"
 
 interface ProgramItem {
   id: string
@@ -21,7 +21,6 @@ interface ProgramCategory {
   icon: string
   order: number
   active: boolean
-  items: string[]
 }
 
 interface Outcome {
@@ -51,115 +50,117 @@ interface WorkPageData {
   impact: ImpactSection
 }
 
+// Default data structure
+const defaultWorkData: WorkPageData = {
+  headerTitle: "Our Work & Programs",
+  headerDescription: "Comprehensive initiatives across multiple sectors creating meaningful impact in communities.",
+  outcomesTitle: "Program Outcomes",
+  outcomesDescription: "Measurable results from our initiatives",
+  impactTitle: "Our Reach & Impact",
+  impactDescription: "Working across multiple states to create sustainable change in education, health, environment, and livelihood sectors.",
+  categories: [
+    {
+      id: "education",
+      title: "Education & Skill Development",
+      icon: "GraduationCap",
+      order: 0,
+      active: true
+    },
+    {
+      id: "environment",
+      title: "Environmental & Agricultural",
+      icon: "Leaf",
+      order: 1,
+      active: true
+    },
+    {
+      id: "social",
+      title: "Social Welfare & Health",
+      icon: "Heart",
+      order: 2,
+      active: true
+    },
+    {
+      id: "community",
+      title: "Community Development",
+      icon: "Users",
+      order: 3,
+      active: true
+    }
+  ],
+  outcomes: [
+    {
+      id: "programs",
+      metric: "100+",
+      label: "Training Programs",
+      detail: "Annually conducted",
+      order: 0,
+      active: true
+    },
+    {
+      id: "youth",
+      metric: "5000+",
+      label: "Youth Trained",
+      detail: "In various skills",
+      order: 1,
+      active: true
+    },
+    {
+      id: "villages",
+      metric: "50+",
+      label: "Villages Reached",
+      detail: "With initiatives",
+      order: 2,
+      active: true
+    },
+    {
+      id: "people",
+      metric: "10000+",
+      label: "People Benefited",
+      detail: "Through programs",
+      order: 3,
+      active: true
+    }
+  ],
+  impact: {
+    description: "Working across multiple states to create sustainable change in education, health, environment, and livelihood sectors.",
+    geographicReach: [
+      "Uttar Pradesh (Primary focus)",
+      "Multiple rural and urban communities",
+      "Expanding national presence"
+    ],
+    sdgs: [
+      "Quality Education (SDG 4)",
+      "Good Health & Wellness (SDG 3)",
+      "Clean Energy & Environment (SDG 7, 13)"
+    ]
+  }
+}
+
 export default function OurWork() {
   const [isLoaded, setIsLoaded] = useState(false)
-  const [workData, setWorkData] = useState<WorkPageData | null>(null)
+  const [workData, setWorkData] = useState<WorkPageData>(defaultWorkData)
   const [programItems, setProgramItems] = useState<ProgramItem[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        // Load work page data
-        const workDoc = await getDoc(doc(db, "workPage", "data"))
-        if (workDoc.exists()) {
-          setWorkData(workDoc.data() as WorkPageData)
-        } else {
-          // Fallback to default data
-          setWorkData({
-            headerTitle: "Our Work & Programs",
-            headerDescription: "Comprehensive initiatives across multiple sectors creating meaningful impact in communities.",
-            outcomesTitle: "Program Outcomes",
-            outcomesDescription: "Measurable results from our initiatives",
-            impactTitle: "Our Reach & Impact",
-            impactDescription: "Working across multiple states to create sustainable change in education, health, environment, and livelihood sectors.",
-            categories: [
-              {
-                id: "education",
-                title: "Education & Skill Development",
-                icon: "GraduationCap",
-                order: 0,
-                active: true,
-                items: []
-              },
-              {
-                id: "environment",
-                title: "Environmental & Agricultural",
-                icon: "Leaf",
-                order: 1,
-                active: true,
-                items: []
-              },
-              {
-                id: "social",
-                title: "Social Welfare & Health",
-                icon: "Heart",
-                order: 2,
-                active: true,
-                items: []
-              },
-              {
-                id: "community",
-                title: "Community Development",
-                icon: "Users",
-                order: 3,
-                active: true,
-                items: []
-              }
-            ],
-            outcomes: [
-              {
-                id: "programs",
-                metric: "100+",
-                label: "Training Programs",
-                detail: "Annually conducted",
-                order: 0,
-                active: true
-              },
-              {
-                id: "youth",
-                metric: "5000+",
-                label: "Youth Trained",
-                detail: "In various skills",
-                order: 1,
-                active: true
-              },
-              {
-                id: "villages",
-                metric: "50+",
-                label: "Villages Reached",
-                detail: "With initiatives",
-                order: 2,
-                active: true
-              },
-              {
-                id: "people",
-                metric: "10000+",
-                label: "People Benefited",
-                detail: "Through programs",
-                order: 3,
-                active: true
-              }
-            ],
-            impact: {
-              description: "Working across multiple states to create sustainable change in education, health, environment, and livelihood sectors.",
-              geographicReach: [
-                "Uttar Pradesh (Primary focus)",
-                "Multiple rural and urban communities",
-                "Expanding national presence"
-              ],
-              sdgs: [
-                "Quality Education (SDG 4)",
-                "Good Health & Wellness (SDG 3)",
-                "Clean Energy & Environment (SDG 7, 13)"
-              ]
-            }
-          })
-        }
-        
-        // Load program items
+        // Load work page data with real-time listener
+        const workDocRef = doc(db, "workPage", "data")
+        const unsubscribeWorkData = onSnapshot(workDocRef, (docSnapshot) => {
+          if (docSnapshot.exists()) {
+            const data = docSnapshot.data() as WorkPageData
+            setWorkData(data)
+          } else {
+            // If no data exists, use default data
+            setWorkData(defaultWorkData)
+          }
+        })
+
+        // Load program items with real-time listener
         const itemsQuery = query(collection(db, "programItems"), orderBy("order"))
-        const unsubscribe = onSnapshot(itemsQuery, (snapshot) => {
+        const unsubscribeItems = onSnapshot(itemsQuery, (snapshot) => {
           const itemsData: ProgramItem[] = []
           snapshot.forEach((doc) => {
             itemsData.push({
@@ -170,14 +171,16 @@ export default function OurWork() {
           setProgramItems(itemsData)
           setIsLoaded(true)
           setLoading(false)
-        }, (error) => {
-          console.error("Error loading program items:", error)
-          setLoading(false)
         })
-        
-        return () => unsubscribe()
+
+        // Cleanup listeners
+        return () => {
+          unsubscribeWorkData()
+          unsubscribeItems()
+        }
       } catch (error) {
         console.error("Error loading work data:", error)
+        setWorkData(defaultWorkData)
         setLoading(false)
       }
     }
@@ -194,26 +197,13 @@ export default function OurWork() {
 
   // Get icon component by name
   const getIconComponent = (iconName: string) => {
-    switch (iconName) {
-      case "GraduationCap": return ({ className }: { className: string }) => (
-        <div className={`w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0 ${className}`}></div>
-      )
-      case "Leaf": return ({ className }: { className: string }) => (
-        <div className={`w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0 ${className}`}></div>
-      )
-      case "Heart": return ({ className }: { className: string }) => (
-        <div className={`w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0 ${className}`}></div>
-      )
-      case "Users": return ({ className }: { className: string }) => (
-        <div className={`w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0 ${className}`}></div>
-      )
-      default: return ({ className }: { className: string }) => (
-        <div className={`w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0 ${className}`}></div>
-      )
-    }
+    const Icon = ({ className }: { className: string }) => (
+      <div className={`w-2 h-2 bg-foreground rounded-full mt-2 flex-shrink-0 ${className}`}></div>
+    )
+    return Icon
   }
 
-  if (loading || !workData) {
+  if (loading) {
     return (
       <>
         <Navigation />
@@ -227,6 +217,11 @@ export default function OurWork() {
       </>
     )
   }
+
+  // Filter active categories
+  const activeCategories = workData.categories
+    .filter(category => category.active)
+    .sort((a, b) => a.order - b.order)
 
   return (
     <>
@@ -247,19 +242,22 @@ export default function OurWork() {
         {/* Work Categories */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="space-y-16">
-            {workData.categories
-              .filter(category => category.active)
-              .sort((a, b) => a.order - b.order)
-              .map((category, index) => {
-                const categoryItems = getCategoryItems(category.id)
-                if (categoryItems.length === 0) return null
+            {activeCategories.map((category, index) => {
+              const categoryItems = getCategoryItems(category.id)
+              
+              // REMOVED: if (categoryItems.length === 0) return null
 
-                return (
-                  <div key={category.id} className="animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
-                    <div className="mb-8">
-                      <h2 className="text-2xl md:text-3xl font-bold mb-2">{category.title}</h2>
-                      <div className="w-12 h-1 bg-foreground rounded-full"></div>
-                    </div>
+              return (
+                <div 
+                  key={category.id} 
+                  className="animate-fade-in-up" 
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <div className="mb-8">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-2">{category.title}</h2>
+                    <div className="w-12 h-1 bg-foreground rounded-full"></div>
+                  </div>
+                  {categoryItems.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {categoryItems.map((item, itemIndex) => (
                         <div
@@ -273,9 +271,15 @@ export default function OurWork() {
                         </div>
                       ))}
                     </div>
-                  </div>
-                )
-              })}
+                  ) : (
+                    <div className="text-center py-12 border border-border rounded-lg">
+                      <div className="w-2 h-2 bg-foreground rounded-full mx-auto mb-4"></div>
+                      <p className="text-muted-foreground italic">No program items available in this category.</p>
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </section>
 
@@ -311,7 +315,7 @@ export default function OurWork() {
             <div>
               <h2 className="text-3xl font-bold mb-4">{workData.impactTitle}</h2>
               <p className="opacity-90 max-w-2xl">
-                {workData.impactDescription}
+                {workData.impact.description || workData.impactDescription}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

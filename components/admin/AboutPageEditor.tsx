@@ -46,7 +46,9 @@ import {
   BarChart,
   RefreshCw,
   File,
-  Image
+  Image,
+  Type,
+  FileEdit
 } from "lucide-react"
 
 interface AboutSection {
@@ -76,8 +78,11 @@ interface AboutPageData {
   missionStatement: string
   missionDescription: string
   commitments: string[]
-  pdfUrl: string
-  pdfPath?: string
+  // New fields for bylaws
+  bylawsText: string
+  bylawsImage: string
+  bylawsImagePath?: string
+  // End new fields
   registrationDetails: {
     number: string
     upi: string
@@ -109,13 +114,14 @@ export default function AboutPageEditor() {
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<string | null>(null)
   const [uploadProgress, setUploadProgress] = useState(0)
-  const [activeSection, setActiveSection] = useState<"banner" | "content" | "gallery" | "mission" | "pdf" | "details">("banner")
+  const [activeSection, setActiveSection] = useState<"banner" | "content" | "gallery" | "mission" | "bylaws" | "details">("banner")
   
   const [bannerImageFile, setBannerImageFile] = useState<File | null>(null)
   const [bannerPreviewUrl, setBannerPreviewUrl] = useState<string | null>(null)
   const [galleryImageFile, setGalleryImageFile] = useState<File | null>(null)
   const [galleryPreviewUrl, setGalleryPreviewUrl] = useState<string | null>(null)
-  const [pdfFile, setPdfFile] = useState<File | null>(null)
+  const [bylawsImageFile, setBylawsImageFile] = useState<File | null>(null)
+  const [bylawsPreviewUrl, setBylawsPreviewUrl] = useState<string | null>(null)
   
   const [newGalleryImage, setNewGalleryImage] = useState({
     alt: "",
@@ -135,6 +141,44 @@ export default function AboutPageEditor() {
     description: ""
   })
 
+  // Default bylaws text
+  const DEFAULT_BYLAWS_TEXT = `**आपका सहयोग फाउंडेशन संविधान एवं नियमावली**
+
+**अनुच्छेद 1: संगठन का नाम**
+संगठन का नाम "आपका सहयोग फाउंडेशन" होगा, जिसे संक्षेप में "ए.एस.एफ." कहा जाएगा।
+
+**अनुच्छेद 2: मुख्य उद्देश्य**
+1. समाज के कमजोर वर्गों को सहायता प्रदान करना
+2. महिला सशक्तिकरण एवं बाल संरक्षण
+3. पर्यावरण संरक्षण एवं स्वच्छता अभियान
+4. निःशुल्क शिक्षा एवं स्वास्थ्य सेवाएं प्रदान करना
+5. सामाजिक न्याय एवं समानता को बढ़ावा देना
+
+**अनुच्छेद 3: सदस्यता**
+1. 18 वर्ष से अधिक आयु का कोई भी व्यक्ति सदस्य बन सकता है
+2. सदस्यता फॉर्म भरकर एवं आवश्यक दस्तावेज जमा करके
+3. सदस्यता निर्धारित नियमों के अधीन होगी
+
+**अनुच्छेद 4: प्रबंधन समिति**
+1. कार्यकारी समिति में अध्यक्ष, सचिव, कोषाध्यक्ष एवं 4 सदस्य होंगे
+2. समिति का चुनाव प्रति 3 वर्ष में आम सभा द्वारा किया जाएगा
+3. समिति की बैठक प्रति माह कम से कम एक बार आयोजित की जाएगी
+
+**अनुच्छेद 5: वित्तीय व्यवस्था**
+1. सभी दान रसीदों के साथ स्वीकार किए जाएंगे
+2. वार्षिक लेखा परीक्षा अनिवार्य होगी
+3. सभी वित्तीय लेन-देन बैंक खाते के माध्यम से किए जाएंगे
+
+**अनुच्छेद 6: सामान्य सभा**
+1. वार्षिक सामान्य सभा प्रत्येक वर्ष मार्च माह में आयोजित की जाएगी
+2. विशेष सामान्य सभा आवश्यकता पड़ने पर बुलाई जा सकेगी
+3. सभी निर्णय बहुमत से लिए जाएंगे
+
+**अनुच्छेद 7: संशोधन**
+इस संविधान में संशोधन सामान्य सभा के दो-तिहाई बहुमत से किया जा सकेगा।
+
+**नोट:** यह संविधान सोसायटी पंजीकरण अधिनियम, 1860 के अंतर्गत पंजीकृत है।`
+
   // Load about page data
   useEffect(() => {
     const loadAboutData = async () => {
@@ -143,7 +187,12 @@ export default function AboutPageEditor() {
         const docSnap = await getDoc(docRef)
         
         if (docSnap.exists()) {
-          setAboutData(docSnap.data() as AboutPageData)
+          const data = docSnap.data() as AboutPageData
+          // Ensure bylawsText exists, if not set default
+          if (!data.bylawsText) {
+            data.bylawsText = DEFAULT_BYLAWS_TEXT
+          }
+          setAboutData(data)
         } else {
           // Initialize with default data
           const defaultData: AboutPageData = {
@@ -154,7 +203,10 @@ export default function AboutPageEditor() {
             missionStatement: "समाज के हर व्यक्ति को सहायता, सुरक्षा और सम्मान उपलब्ध कराना।",
             missionDescription: "आपका सहयोग फाउंडेशन एक ऐसी पहल है, जो समाज के कमजोर वर्गों के लिए मजबूत सहारा बनने का कार्य कर रही है।",
             commitments: ["पारदर्शिता", "जिम्मेदारी", "मानवीय संवेदना", "त्वरित सहायता"],
-            pdfUrl: "/documents/laws.pdf",
+            // Default bylaws data
+            bylawsText: DEFAULT_BYLAWS_TEXT,
+            bylawsImage: "/images/bylaws-placeholder.jpg",
+            // End default bylaws data
             registrationDetails: {
               number: "Regd. No. 49/2025/Jewar",
               upi: "UPI: 9999767640m@pnb",
@@ -216,7 +268,12 @@ export default function AboutPageEditor() {
         
         const unsubscribe = onSnapshot(docRef, (docSnap) => {
           if (docSnap.exists()) {
-            setAboutData(docSnap.data() as AboutPageData)
+            const data = docSnap.data() as AboutPageData
+            // Ensure bylawsText exists, if not set default
+            if (!data.bylawsText) {
+              data.bylawsText = DEFAULT_BYLAWS_TEXT
+            }
+            setAboutData(data)
           }
         }, (error) => {
           console.error("Error in about page listener:", error)
@@ -236,6 +293,7 @@ export default function AboutPageEditor() {
       unsubscribe()
       if (bannerPreviewUrl) URL.revokeObjectURL(bannerPreviewUrl)
       if (galleryPreviewUrl) URL.revokeObjectURL(galleryPreviewUrl)
+      if (bylawsPreviewUrl) URL.revokeObjectURL(bylawsPreviewUrl)
     }
   }, [])
 
@@ -303,69 +361,6 @@ export default function AboutPageEditor() {
     }
   }
 
-  // Upload PDF to Firebase Storage
-  const uploadPdfToFirebaseStorage = async (
-    file: File, 
-    existingPdfPath?: string
-  ): Promise<{url: string, path: string}> => {
-    setUploading(true)
-    setUploadProgress(0)
-    setError(null)
-
-    try {
-      if (file.type !== "application/pdf") {
-        throw new Error("Please select a PDF file")
-      }
-
-      if (file.size > 10 * 1024 * 1024) {
-        throw new Error("PDF size should be less than 10MB")
-      }
-
-      const progressInterval = setInterval(() => {
-        setUploadProgress((prev) => {
-          if (prev >= 90) {
-            clearInterval(progressInterval)
-            return 90
-          }
-          return prev + 10
-        })
-      }, 200)
-
-      const timestamp = Date.now()
-      const randomString = Math.random().toString(36).substring(2, 15)
-      const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_')
-      const fileName = `${timestamp}_${randomString}_${sanitizedName}`
-      const storagePath = `documents/${fileName}`
-      
-      const storageRef = ref(storage, storagePath)
-      const snapshot = await uploadBytes(storageRef, file)
-      
-      const downloadURL = await getDownloadURL(snapshot.ref)
-      
-      clearInterval(progressInterval)
-      setUploadProgress(100)
-
-      if (existingPdfPath && existingPdfPath !== storagePath) {
-        try {
-          const oldPdfRef = ref(storage, existingPdfPath)
-          await deleteObject(oldPdfRef)
-        } catch (deleteError) {
-          console.warn("Could not delete old PDF:", deleteError)
-        }
-      }
-
-      await new Promise((resolve) => setTimeout(resolve, 500))
-
-      return { url: downloadURL, path: storagePath }
-    } catch (error: any) {
-      console.error("Error uploading PDF:", error)
-      throw new Error(`Failed to upload PDF: ${error.message || "Unknown error"}`)
-    } finally {
-      setUploading(false)
-      setTimeout(() => setUploadProgress(0), 1000)
-    }
-  }
-
   // Update about page data
   const updateAboutData = async (updates: Partial<AboutPageData>) => {
     if (!aboutData) return
@@ -424,29 +419,61 @@ export default function AboutPageEditor() {
     }
   }
 
-  // Handle PDF upload
-  const handlePdfUpload = async () => {
-    if (!pdfFile || !aboutData) return
+  // Handle bylaws image upload
+  const handleBylawsImageUpload = async () => {
+    if (!bylawsImageFile || !aboutData) return
 
     try {
       setUploading(true)
       setError(null)
 
-      const pdfData = await uploadPdfToFirebaseStorage(pdfFile, aboutData.pdfPath)
+      const imageData = await uploadImageToFirebaseStorage(bylawsImageFile, aboutData.bylawsImagePath, "about-page/bylaws")
 
       await updateAboutData({
-        pdfUrl: pdfData.url,
-        pdfPath: pdfData.path
+        bylawsImage: imageData.url,
+        bylawsImagePath: imageData.path
       })
 
-      setPdfFile(null)
+      setBylawsImageFile(null)
+      if (bylawsPreviewUrl) {
+        URL.revokeObjectURL(bylawsPreviewUrl)
+        setBylawsPreviewUrl(null)
+      }
 
-      setSuccess("✅ PDF document updated successfully!")
+      setSuccess("✅ Bylaws image updated successfully!")
       setTimeout(() => setSuccess(null), 3000)
     } catch (err: any) {
-      setError(`Failed to upload PDF: ${err.message}`)
+      setError(`Failed to upload bylaws image: ${err.message}`)
     } finally {
       setUploading(false)
+    }
+  }
+
+  // Remove bylaws image
+  const handleRemoveBylawsImage = async () => {
+    if (!aboutData) return
+
+    if (!confirm("Are you sure you want to remove the bylaws image?")) return
+
+    try {
+      if (aboutData.bylawsImagePath) {
+        try {
+          const imageRef = ref(storage, aboutData.bylawsImagePath)
+          await deleteObject(imageRef)
+        } catch (err) {
+          console.warn("Could not delete bylaws image from storage:", err)
+        }
+      }
+
+      await updateAboutData({
+        bylawsImage: "",
+        bylawsImagePath: ""
+      })
+
+      setSuccess("✅ Bylaws image removed successfully!")
+      setTimeout(() => setSuccess(null), 3000)
+    } catch (err: any) {
+      setError(`Failed to remove bylaws image: ${err.message}`)
     }
   }
 
@@ -726,38 +753,33 @@ export default function AboutPageEditor() {
   }
 
   // Handle file selection
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: "banner" | "gallery" | "pdf") => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: "banner" | "gallery" | "bylaws") => {
     const file = e.target.files?.[0]
     if (!file) return
 
     setError(null)
 
-    if (type === "pdf") {
-      if (file.type !== "application/pdf") {
-        setError("Please select a PDF file")
-        return
-      }
-      setPdfFile(file)
-    } else {
-      if (!file.type.startsWith("image/")) {
-        setError("Please select an image file")
-        return
-      }
-      
-      if (file.size > 5 * 1024 * 1024) {
-        setError("Image size should be less than 5MB")
-        return
-      }
+    if (!file.type.startsWith("image/")) {
+      setError("Please select an image file")
+      return
+    }
+    
+    if (file.size > 5 * 1024 * 1024) {
+      setError("Image size should be less than 5MB")
+      return
+    }
 
-      const objectUrl = URL.createObjectURL(file)
-      
-      if (type === "banner") {
-        setBannerImageFile(file)
-        setBannerPreviewUrl(objectUrl)
-      } else if (type === "gallery") {
-        setGalleryImageFile(file)
-        setGalleryPreviewUrl(objectUrl)
-      }
+    const objectUrl = URL.createObjectURL(file)
+    
+    if (type === "banner") {
+      setBannerImageFile(file)
+      setBannerPreviewUrl(objectUrl)
+    } else if (type === "gallery") {
+      setGalleryImageFile(file)
+      setGalleryPreviewUrl(objectUrl)
+    } else if (type === "bylaws") {
+      setBylawsImageFile(file)
+      setBylawsPreviewUrl(objectUrl)
     }
   }
 
@@ -838,7 +860,7 @@ export default function AboutPageEditor() {
             { id: "content", label: "Content", icon: FileText },
             { id: "gallery", label: "Gallery", icon: Layers },
             { id: "mission", label: "Mission & Values", icon: Globe },
-            { id: "pdf", label: "PDF Document", icon: File },
+            { id: "bylaws", label: "Bylaws", icon: FileEdit },
             { id: "details", label: "Registration Details", icon: Users }
           ].map((section) => (
             <button
@@ -1520,90 +1542,213 @@ export default function AboutPageEditor() {
         </div>
       )}
 
-      {/* PDF DOCUMENT SECTION */}
-      {activeSection === "pdf" && (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">PDF Document</h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Current PDF */}
-            <div>
-              <h3 className="font-semibold text-gray-700 mb-2">Current PDF</h3>
-              <div className="border border-gray-200 rounded-lg p-4">
-                <div className="flex items-center gap-3">
-                  <File className="text-red-500" size={24} />
-                  <div>
-                    <p className="font-medium">Foundation ByLaws</p>
-                    <p className="text-sm text-gray-600">
-                      {aboutData.pdfUrl ? "PDF is uploaded" : "No PDF uploaded"}
-                    </p>
-                  </div>
-                </div>
-                {aboutData.pdfUrl && (
-                  <a
-                    href={aboutData.pdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 mt-3 text-blue-600 hover:text-blue-800"
-                  >
-                    <Download size={16} />
-                    View/Download PDF
-                  </a>
-                )}
+      {/* BYLAWS SECTION */}
+      {activeSection === "bylaws" && (
+        <div className="space-y-6">
+          {/* Bylaws Text Editor */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-gray-900">Bylaws Content</h2>
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <FileEdit size={16} />
+                <span>Edit bylaws text</span>
               </div>
             </div>
-
-            {/* Upload New PDF */}
-            <div>
-              <h3 className="font-semibold text-gray-700 mb-2">Upload New PDF</h3>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    PDF File *
+            
+            <div className="space-y-4">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <label className="block text-sm font-medium text-gray-700">
+                    Bylaws Text (Supports markdown-like formatting)
                   </label>
-                  <div className="flex items-center gap-4">
-                    <label className={`flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-colors ${
-                      uploading ? "bg-gray-400 cursor-not-allowed" : "bg-black text-white hover:bg-gray-800"
-                    }`}>
-                      <Upload size={18} />
-                      {uploading ? "Uploading..." : "Select PDF"}
-                      <input
-                        type="file"
-                        accept=".pdf"
-                        onChange={(e) => handleFileChange(e, "pdf")}
-                        className="hidden"
-                        disabled={uploading}
-                      />
+                  <div className="text-xs text-gray-500">
+                    Use **bold** for headings, 1. for numbered lists
+                  </div>
+                </div>
+                <textarea
+                  value={aboutData.bylawsText || ""}
+                  onChange={(e) => updateAboutData({ bylawsText: e.target.value })}
+                  className="w-full h-96 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent font-mono text-sm"
+                  placeholder="Enter bylaws text here..."
+                  disabled={saving}
+                />
+              </div>
+
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                <h4 className="font-semibold text-gray-700 mb-2">Formatting Tips:</h4>
+                <ul className="text-xs text-gray-600 space-y-1">
+                  <li>• Use <code>**Heading**</code> for section headings</li>
+                  <li>• Use <code>1. Point one</code> for numbered lists</li>
+                  <li>• Use empty lines for paragraph breaks</li>
+                  <li>• Text will be displayed exactly as entered</li>
+                </ul>
+              </div>
+
+              <div className="pt-4 border-t border-gray-200">
+                <button
+                  onClick={() => updateAboutData({})}
+                  disabled={saving}
+                  className="px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 disabled:bg-gray-400"
+                >
+                  {saving ? "Saving..." : "Save Bylaws Text"}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Bylaws Image */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Bylaws Image (Optional)</h2>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Current Image */}
+              <div>
+                <h3 className="font-semibold text-gray-700 mb-2">Current Image</h3>
+                {aboutData.bylawsImage ? (
+                  <div className="space-y-3">
+                    <div className="border border-gray-200 rounded-lg overflow-hidden">
+                      <div className="relative h-48 w-full bg-gray-100">
+                        <img
+                          src={aboutData.bylawsImage || "/placeholder.svg"}
+                          alt="Current Bylaws Image"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      onClick={handleRemoveBylawsImage}
+                      className="w-full px-4 py-2 bg-red-50 text-red-700 border border-red-200 rounded-lg hover:bg-red-100 transition-colors"
+                    >
+                      Remove Image
+                    </button>
+                  </div>
+                ) : (
+                  <div className="border-2 border-dashed border-gray-300 rounded-lg h-48 flex items-center justify-center">
+                    <div className="text-center">
+                      <ImageIcon className="mx-auto text-gray-400 mb-2" size={32} />
+                      <p className="text-gray-500">No bylaws image uploaded</p>
+                      <p className="text-xs text-gray-400 mt-1">Image is optional</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Upload New Image */}
+              <div>
+                <h3 className="font-semibold text-gray-700 mb-2">Upload New Image</h3>
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Bylaws Image (Optional)
                     </label>
-                    {pdfFile && (
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm text-gray-600">
-                          Selected: {pdfFile.name}
-                        </span>
-                        <button
-                          onClick={() => setPdfFile(null)}
-                          className="p-1 text-red-500 hover:text-red-700"
+                    <div className="flex items-center gap-4">
+                      <label className={`flex items-center gap-2 px-4 py-2 rounded-lg cursor-pointer transition-colors ${
+                        uploading ? "bg-gray-400 cursor-not-allowed" : "bg-black text-white hover:bg-gray-800"
+                      }`}>
+                        <Upload size={18} />
+                        {uploading ? "Uploading..." : "Select Image"}
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={(e) => handleFileChange(e, "bylaws")}
+                          className="hidden"
                           disabled={uploading}
-                        >
-                          <X size={16} />
-                        </button>
+                        />
+                      </label>
+                      {bylawsImageFile && (
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-gray-600">
+                            Selected: {bylawsImageFile.name}
+                          </span>
+                          <button
+                            onClick={() => {
+                              setBylawsImageFile(null)
+                              if (bylawsPreviewUrl) {
+                                URL.revokeObjectURL(bylawsPreviewUrl)
+                                setBylawsPreviewUrl(null)
+                              }
+                            }}
+                            className="p-1 text-red-500 hover:text-red-700"
+                            disabled={uploading}
+                          >
+                            <X size={16} />
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">Recommended: Document photo or related image</p>
+                  </div>
+
+                  {bylawsPreviewUrl && (
+                    <div>
+                      <p className="text-sm font-medium text-gray-700 mb-2">Preview:</p>
+                      <div className="border border-gray-200 rounded-lg overflow-hidden">
+                        <div className="relative h-32 w-full">
+                          <img
+                            src={bylawsPreviewUrl}
+                            alt="New Bylaws Preview"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <button
+                    onClick={handleBylawsImageUpload}
+                    disabled={uploading || !bylawsImageFile}
+                    className={`w-full px-4 py-3 rounded-lg font-semibold transition-colors ${
+                      uploading || !bylawsImageFile
+                        ? "bg-gray-400 cursor-not-allowed"
+                        : "bg-black text-white hover:bg-gray-800"
+                    }`}
+                  >
+                    {uploading ? "Uploading..." : "Upload Bylaws Image"}
+                  </button>
+
+                  <div className="text-xs text-gray-500 p-3 bg-gray-50 rounded-lg">
+                    <p className="font-medium mb-1">Note:</p>
+                    <p>• Bylaws image is optional - the page works fine without it</p>
+                    <p>• The image will be displayed alongside the bylaws text</p>
+                    <p>• Recommended size: 600x400 pixels or similar aspect ratio</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Preview Section */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Preview</h2>
+            <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="lg:col-span-2">
+                  <h3 className="font-semibold text-gray-700 mb-2">Text Preview:</h3>
+                  <div className="bg-white border border-gray-300 rounded p-4 max-h-60 overflow-y-auto">
+                    <div className="whitespace-pre-line text-sm">
+                      {(aboutData.bylawsText || "").substring(0, 500)}...
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-700 mb-2">Image Preview:</h3>
+                  <div className="border border-gray-300 rounded p-4 bg-white">
+                    {aboutData.bylawsImage ? (
+                      <div className="relative h-32 w-full bg-gray-100">
+                        <img
+                          src={aboutData.bylawsImage}
+                          alt="Bylaws Preview"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="text-center py-6 text-gray-500">
+                        <ImageIcon className="mx-auto mb-2 text-gray-300" size={24} />
+                        <p className="text-sm">No image (optional)</p>
                       </div>
                     )}
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">Maximum file size: 10MB</p>
                 </div>
-
-                <button
-                  onClick={handlePdfUpload}
-                  disabled={uploading || !pdfFile}
-                  className={`w-full px-4 py-3 rounded-lg font-semibold transition-colors ${
-                    uploading || !pdfFile
-                      ? "bg-gray-400 cursor-not-allowed"
-                      : "bg-black text-white hover:bg-gray-800"
-                  }`}
-                >
-                  {uploading ? "Uploading..." : "Upload PDF"}
-                </button>
               </div>
             </div>
           </div>
@@ -1675,7 +1820,7 @@ export default function AboutPageEditor() {
 
             <div className="pt-4 border-t border-gray-200">
               <button
-                onClick={() => updateAboutData({})} // Trigger save
+                onClick={() => updateAboutData({})}
                 disabled={saving}
                 className="px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 disabled:bg-gray-400"
               >

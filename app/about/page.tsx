@@ -2,7 +2,7 @@
 
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, BookOpen, Eye, ZoomIn, ZoomOut, Maximize2 } from "lucide-react"
+import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, BookOpen, Calendar, Edit } from "lucide-react"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 
@@ -10,13 +10,72 @@ export default function About() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
-  const [pdfZoom, setPdfZoom] = useState(100)
-  const [isFullscreen, setIsFullscreen] = useState(false)
+  const [bylawsText, setBylawsText] = useState<string>("")
+  const [bylawsImage, setBylawsImage] = useState<string>("")
+  const [loadingBylaws, setLoadingBylaws] = useState(true)
   const imagesPerPage = 6
 
   useEffect(() => {
     setIsLoaded(true)
+    // Load bylaws data from API or Firebase
+    loadBylawsData()
   }, [])
+
+  const loadBylawsData = async () => {
+    try {
+      setLoadingBylaws(true)
+      // Fetch bylaws data from your backend
+      // const response = await fetch('/api/about/bylaws')
+      // const data = await response.json()
+      // setBylawsText(data.text)
+      // setBylawsImage(data.image)
+      
+      // For now, use placeholder data
+      setBylawsText(`
+        **आपका सहयोग फाउंडेशन संविधान एवं नियमावली**
+
+        **अनुच्छेद 1: संगठन का नाम**
+        संगठन का नाम "आपका सहयोग फाउंडेशन" होगा, जिसे संक्षेप में "ए.एस.एफ." कहा जाएगा।
+
+        **अनुच्छेद 2: मुख्य उद्देश्य**
+        1. समाज के कमजोर वर्गों को सहायता प्रदान करना
+        2. महिला सशक्तिकरण एवं बाल संरक्षण
+        3. पर्यावरण संरक्षण एवं स्वच्छता अभियान
+        4. निःशुल्क शिक्षा एवं स्वास्थ्य सेवाएं प्रदान करना
+        5. सामाजिक न्याय एवं समानता को बढ़ावा देना
+
+        **अनुच्छेद 3: सदस्यता**
+        1. 18 वर्ष से अधिक आयु का कोई भी व्यक्ति सदस्य बन सकता है
+        2. सदस्यता फॉर्म भरकर एवं आवश्यक दस्तावेज जमा करके
+        3. सदस्यता निर्धारित नियमों के अधीन होगी
+
+        **अनुच्छेद 4: प्रबंधन समिति**
+        1. कार्यकारी समिति में अध्यक्ष, सचिव, कोषाध्यक्ष एवं 4 सदस्य होंगे
+        2. समिति का चुनाव प्रति 3 वर्ष में आम सभा द्वारा किया जाएगा
+        3. समिति की बैठक प्रति माह कम से कम एक बार आयोजित की जाएगी
+
+        **अनुच्छेद 5: वित्तीय व्यवस्था**
+        1. सभी दान रसीदों के साथ स्वीकार किए जाएंगे
+        2. वार्षिक लेखा परीक्षा अनिवार्य होगी
+        3. सभी वित्तीय लेन-देन बैंक खाते के माध्यम से किए जाएंगे
+
+        **अनुच्छेद 6: सामान्य सभा**
+        1. वार्षिक सामान्य सभा प्रत्येक वर्ष मार्च माह में आयोजित की जाएगी
+        2. विशेष सामान्य सभा आवश्यकता पड़ने पर बुलाई जा सकेगी
+        3. सभी निर्णय बहुमत से लिए जाएंगे
+
+        **अनुच्छेद 7: संशोधन**
+        इस संविधान में संशोधन सामान्य सभा के दो-तिहाई बहुमत से किया जा सकेगा।
+
+        **नोट:** यह संविधान सोसायटी पंजीकरण अधिनियम, 1860 के अंतर्गत पंजीकृत है।
+      `)
+      setBylawsImage("/images/bylaws-placeholder.jpg") // Optional image
+    } catch (error) {
+      console.error("Error loading bylaws:", error)
+    } finally {
+      setLoadingBylaws(false)
+    }
+  }
 
   // Gallery images
   const galleryImages = [
@@ -138,16 +197,19 @@ export default function About() {
     }
   }
 
-  const handleZoomIn = () => {
-    setPdfZoom(prev => Math.min(prev + 25, 200))
-  }
-
-  const handleZoomOut = () => {
-    setPdfZoom(prev => Math.max(prev - 25, 50))
-  }
-
-  const handleFullscreenToggle = () => {
-    setIsFullscreen(!isFullscreen)
+  // Format bylaws text with HTML
+  const formatBylawsText = (text: string) => {
+    return text.split('\n').map((line, index) => {
+      if (line.trim().startsWith('**') && line.trim().endsWith('**')) {
+        return <h3 key={index} className="text-lg font-bold text-primary mt-4 mb-2">{line.replace(/\*\*/g, '')}</h3>
+      } else if (line.trim().match(/^\d+\./)) {
+        return <p key={index} className="ml-4 mb-1">{line}</p>
+      } else if (line.trim() === '') {
+        return <br key={index} />
+      } else {
+        return <p key={index} className="mb-2">{line}</p>
+      }
+    })
   }
 
   return (
@@ -368,29 +430,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Join Us in Hindi - Responsive */}
-        <section className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 mb-12 md:mb-16">
-          <div className="bg-foreground text-background rounded-lg p-4 sm:p-6 md:p-8 lg:p-12 space-y-4 sm:space-y-6 text-center">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">हमसे जुड़ें</h2>
-            <p className="text-sm sm:text-base md:text-lg opacity-90 max-w-2xl mx-auto px-2">
-              यदि आप भी समाज सेवा के इस अभियान का हिस्सा बनना चाहते हैं या किसी सहायता की आवश्यकता है, 
-              तो आपका सहयोग फाउंडेशन सदैव आपके साथ खड़ा है।
-            </p>
-            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 md:gap-4 justify-center">
-              <button className="px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 bg-background text-foreground rounded-lg font-semibold text-sm sm:text-base hover:bg-secondary transition-colors">
-                स्वयंसेवक बनें
-              </button>
-              <button className="px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 border border-background text-background rounded-lg font-semibold text-sm sm:text-base hover:bg-background/10 transition-colors">
-                सहयोग दें
-              </button>
-              <button className="px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 border border-background text-background rounded-lg font-semibold text-sm sm:text-base hover:bg-background/10 transition-colors">
-                सहायता लें
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Beautiful PDF Preview Section - Responsive */}
+        {/* Beautiful Bylaws Section - Responsive */}
         <section className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 mb-12 md:mb-16">
           <div className="space-y-6 sm:space-y-8">
             <div className="text-center space-y-3 sm:space-y-4">
@@ -404,19 +444,10 @@ export default function About() {
               </p>
             </div>
 
-            {/* Beautiful PDF Container */}
-            <div className={`animate-fade-in-up transition-all duration-300 ${isFullscreen ? 'fixed inset-0 z-50 bg-background p-4' : 'relative'}`}>
-              {isFullscreen && (
-                <button
-                  onClick={handleFullscreenToggle}
-                  className="fixed top-4 right-4 z-50 p-2 bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-colors"
-                >
-                  <Maximize2 className="h-5 w-5 rotate-45" />
-                </button>
-              )}
-              
-              <div className={`bg-gradient-to-br from-background via-secondary/50 to-background border border-border rounded-2xl overflow-hidden shadow-2xl ${isFullscreen ? 'h-[calc(100vh-2rem)]' : ''}`}>
-                {/* PDF Header */}
+            {/* Bylaws Container */}
+            <div className="animate-fade-in-up transition-all duration-300">
+              <div className="bg-gradient-to-br from-background via-secondary/50 to-background border border-border rounded-2xl overflow-hidden shadow-xl">
+                {/* Bylaws Header */}
                 <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 p-4 sm:p-6 border-b border-border">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="flex items-center gap-2 sm:gap-3">
@@ -429,79 +460,96 @@ export default function About() {
                       </div>
                     </div>
                     
-                    {/* PDF Controls */}
-                    <div className="flex items-center gap-1 sm:gap-2 bg-background border border-border rounded-lg p-1">
-                      <button
-                        onClick={handleZoomOut}
-                        className="p-2 hover:bg-secondary rounded-md transition-colors"
-                        title="Zoom Out"
-                      >
-                        <ZoomOut className="h-4 w-4" />
-                      </button>
-                      <div className="px-2 sm:px-3 py-1 text-xs sm:text-sm font-medium min-w-[60px] text-center">
-                        {pdfZoom}%
+                    <div className="flex items-center gap-1 sm:gap-2 bg-background border border-border rounded-lg px-3 py-1.5">
+                      <Calendar className="h-4 w-4 text-muted-foreground" />
+                      <span className="text-xs sm:text-sm text-muted-foreground">Registered: 2024</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bylaws Content */}
+                <div className="p-4 sm:p-6 md:p-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                    {/* Text Content - Takes 2/3 on large screens */}
+                    <div className="lg:col-span-2">
+                      {loadingBylaws ? (
+                        <div className="space-y-3">
+                          {[1, 2, 3, 4, 5].map((i) => (
+                            <div key={i} className="h-4 bg-gray-200 rounded animate-pulse"></div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="prose prose-sm sm:prose-base max-w-none">
+                          <div className="whitespace-pre-line text-sm sm:text-base leading-relaxed text-gray-700">
+                            {formatBylawsText(bylawsText)}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Image Section - Takes 1/3 on large screens */}
+                    <div className="space-y-4">
+                      <div className="bg-secondary/30 border border-border rounded-lg p-4">
+                        <h4 className="font-bold text-sm sm:text-base mb-2">Document Information</h4>
+                        <div className="space-y-2 text-xs sm:text-sm">
+                          <div className="flex items-center gap-2">
+                            <FileText className="h-4 w-4 text-muted-foreground" />
+                            <span>Registered under Societies Act, 1860</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Calendar className="h-4 w-4 text-muted-foreground" />
+                            <span>Registration No: 49/2025/Jewar</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <CheckCircle className="h-4 w-4 text-muted-foreground" />
+                            <span>Annual Audits Conducted</span>
+                          </div>
+                        </div>
                       </div>
-                      <button
-                        onClick={handleZoomIn}
-                        className="p-2 hover:bg-secondary rounded-md transition-colors"
-                        title="Zoom In"
-                      >
-                        <ZoomIn className="h-4 w-4" />
-                      </button>
-                      <div className="h-4 w-px bg-border mx-1"></div>
-                      <button
-                        onClick={handleFullscreenToggle}
-                        className="p-2 hover:bg-secondary rounded-md transition-colors"
-                        title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
-                      >
-                        <Maximize2 className="h-4 w-4" />
-                      </button>
+
+                      {/* Bylaws Image - Optional */}
+                      {bylawsImage && (
+                        <div className="border border-border rounded-lg overflow-hidden">
+                          <div className="relative h-48 sm:h-56 w-full bg-gray-100">
+                            <Image
+                              src={bylawsImage}
+                              alt="Bylaws Document"
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 1024px) 100vw, 33vw"
+                            />
+                          </div>
+                          <div className="p-3 bg-secondary/30">
+                            <p className="text-xs sm:text-sm text-center text-muted-foreground">
+                              Official Bylaws Document
+                            </p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
 
-                {/* PDF Viewer */}
-                <div className="relative" style={{ height: isFullscreen ? 'calc(100vh - 180px)' : '500px' }}>
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-secondary/20 to-transparent">
-                    <div className="text-center space-y-2 p-8">
-                      <Eye className="h-12 w-12 text-muted-foreground/50 mx-auto" />
-                      <p className="text-sm text-muted-foreground">Scroll to view document</p>
-                    </div>
-                  </div>
-                  
-                  <iframe
-                    src={`/documents/laws.pdf#view=fitH&zoom=${pdfZoom}`}
-                    className="w-full h-full relative z-10"
-                    title="Aapka Sahyog Foundation ByLaws"
-                    style={{ 
-                      transform: `scale(${pdfZoom / 100})`,
-                      transformOrigin: 'center',
-                      height: '100%',
-                      width: '100%'
-                    }}
-                  />
-                </div>
-
-                {/* PDF Footer */}
+                {/* Bylaws Footer */}
                 <div className="bg-gradient-to-r from-secondary/30 via-secondary/20 to-secondary/30 p-3 sm:p-4 border-t border-border">
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
                     <div className="text-xs sm:text-sm text-muted-foreground">
-                      <span className="font-medium">Viewing Tips:</span> Use mouse wheel to scroll • Use controls above to adjust zoom
+                      <span className="font-medium">Note:</span> This document is governed by Indian Laws and Regulations
                     </div>
                     <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
                         <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
-                        <span>Official Document</span>
+                        <span>Legal Document</span>
                       </div>
                       <span>•</span>
-                      <span>Secure & Verified</span>
+                      <span>Publicly Available</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Document Info Cards */}
+            {/* Info Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
               <div className="bg-secondary border border-border rounded-xl p-4 sm:p-5">
                 <div className="flex items-center gap-3 mb-3">
@@ -538,6 +586,28 @@ export default function About() {
                   Annual reports and financial statements available upon request. We believe in open governance.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Join Us in Hindi - Responsive */}
+        <section className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 mb-12 md:mb-16">
+          <div className="bg-foreground text-background rounded-lg p-4 sm:p-6 md:p-8 lg:p-12 space-y-4 sm:space-y-6 text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">हमसे जुड़ें</h2>
+            <p className="text-sm sm:text-base md:text-lg opacity-90 max-w-2xl mx-auto px-2">
+              यदि आप भी समाज सेवा के इस अभियान का हिस्सा बनना चाहते हैं या किसी सहायता की आवश्यकता है, 
+              तो आपका सहयोग फाउंडेशन सदैव आपके साथ खड़ा है।
+            </p>
+            <div className="flex flex-col xs:flex-row gap-2 sm:gap-3 md:gap-4 justify-center">
+              <button className="px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 bg-background text-foreground rounded-lg font-semibold text-sm sm:text-base hover:bg-secondary transition-colors">
+                स्वयंसेवक बनें
+              </button>
+              <button className="px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 border border-background text-background rounded-lg font-semibold text-sm sm:text-base hover:bg-background/10 transition-colors">
+                सहयोग दें
+              </button>
+              <button className="px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 border border-background text-background rounded-lg font-semibold text-sm sm:text-base hover:bg-background/10 transition-colors">
+                सहायता लें
+              </button>
             </div>
           </div>
         </section>

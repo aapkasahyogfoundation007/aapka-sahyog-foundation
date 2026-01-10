@@ -1,986 +1,173 @@
-[00:00:01.744] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:01.975] Server  LOG      ✓ Ready in 1256ms
-[00:00:07.633] Server  LOG      ○ Compiling /about ...
-[00:00:12.035] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:12.035] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/about","route":"/about"}
-[00:00:12.035] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767709466776}
-[00:00:17.143] Browser WARN    Image with src "/images/asf-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:35.071] Browser LOG     Loading team members from Firestore...
-[00:00:35.072] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:35.072] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
-[00:00:35.072] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767709489647}
-[00:00:35.072] Browser LOG     ✅ Loaded 45 team members
-[00:00:35.072] Browser LOG     Loading menu items from Firestore...
-[00:00:35.072] Browser LOG     ✅ Loaded 4 menu items
-[00:00:35.072] Browser LOG     🔄 Setting up Firestore real-time listener...
-[00:00:35.072] Browser LOG     🔄 Setting up menu items real-time listener...
-[00:00:37.112] Browser LOG     🧹 Cleaning up Firestore listeners
-[00:00:37.112] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/login color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/login","o":"http://localhost:3000/dashboard/login","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767709491870}
-[00:00:50.557] Browser LOG     Loading team members from Firestore...
-[00:00:50.558] Browser LOG     [2;38;2;124;124;124m%s[0m 🧹 Cleaning up Firestore listeners
-[00:00:50.558] Browser LOG     [2;38;2;124;124;124m%s[0m Loading team members from Firestore...
-[00:00:50.558] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767709505173}
-[00:00:50.558] Browser LOG     ✅ Loaded 45 team members
-[00:00:50.558] Browser LOG     Loading menu items from Firestore...
-[00:00:50.558] Browser LOG     ✅ Loaded 45 team members
-[00:00:50.558] Browser LOG     Loading menu items from Firestore...
-[00:00:50.558] Browser LOG     ✅ Loaded 4 menu items
-[00:00:50.558] Browser LOG     🔄 Setting up Firestore real-time listener...
-[00:00:50.558] Browser LOG     🔄 Setting up menu items real-time listener...
-[00:00:50.558] Browser LOG     ✅ Loaded 4 menu items
-[00:00:50.558] Browser LOG     🔄 Setting up Firestore real-time listener...
-[00:00:50.558] Browser LOG     🔄 Setting up menu items real-time listener...
-[00:02:59.204] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:02:59.204] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:02:59.204] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767709633968}
-[00:03:01.059] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767709635795}
-[00:03:03.524] Browser WARN    Image with src "/images/asf-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:09.903] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:03:09.903] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/documents/laws.docx","route":"/documents/laws.docx"}
-[00:03:09.903] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/documents/laws.docx color: rgb(120, 120, 120) color: inherit {"dp":"/documents/laws.docx","o":"http://localhost:3000/documents/laws.docx","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767709644653}
-[00:11:05.645] Server  LOG        Reload env: .env
-[00:11:06.177] Server  LOG      ✓ Compiled in 1ms
-[00:11:12.267] Server  LOG        Reload env: .env
-[00:11:17.833] Server  LOG        Reload env: .env
-[00:11:21.315] Server  LOG        Reload env: .env
-[00:11:28.189] Server  LOG        Reload env: .env
-[00:19:48.266] Server  LOG        Reload env: .env
-[00:19:49.436] Server  LOG        Reload env: .env
-[00:19:57.447] Server  LOG        Reload env: .env
-[00:19:58.720] Server  LOG        Reload env: .env
-[00:20:04.261] Server  LOG        Reload env: .env
-[00:20:29.944] Server  LOG        Reload env: .env
-[00:20:52.512] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/contact color: rgb(120, 120, 120) color: inherit {"dp":"/contact","o":"http://localhost:3000/contact","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767710707271}
-[00:21:55.852] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-work color: rgb(120, 120, 120) color: inherit {"dp":"/our-work","o":"http://localhost:3000/our-work","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767710770597}
-[00:22:38.136] Server  LOG      ✓ Compiled in 245ms
-[00:22:58.017] Server  LOG      ✓ Compiled in 5.5s
-[00:22:58.668] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:22:58.668] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:22:58.669] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:22:58.669] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:23:05.979] Server  LOG      ✓ Compiled in 251ms
-[00:23:16.382] Server  LOG      ✓ Compiled in 179ms
-[00:23:25.335] Server  LOG      ✓ Compiled in 121ms
-[00:23:28.094] Server  LOG      ✓ Compiled in 128ms
-[00:23:32.195] Server  LOG      ✓ Compiled in 166ms
-[00:23:50.459] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767710885211}
-[00:27:28.681] Server  LOG      ✓ Compiled in 207ms
-[00:27:29.664] Browser ERROR   uncaughtError: ReferenceError: Fil is not defined
-[00:27:30.866] Server  LOG      ✓ Compiled in 136ms
-[00:27:31.662] Browser ERROR   ./app/about/page.tsx:424:36
-Parsing ecmascript source code failed
-  422 |                     <div className="bg-white border border-gray-200 rounded-lg p-4">
-  423 |                       <div className="flex items-center gap-3 mb-2">
-> 424 |                         < className="w-5 h-5 text-gray-500" />
-      |                                    ^
-  425 |                         <span className="font-medium">File Size</span>
-  426 |                       </div>
-  427 |                       <p className="text-gray-900 font-semibold">{wordDocumentInfo.fileSize}</p>
-
-Expected '</', got '='
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:31.662] Browser ERROR   ./app/about/page.tsx:424:36
-Parsing ecmascript source code failed
-  422 |                     <div className="bg-white border border-gray-200 rounded-lg p-4">
-  423 |                       <div className="flex items-center gap-3 mb-2">
-> 424 |                         < className="w-5 h-5 text-gray-500" />
-      |                                    ^
-  425 |                         <span className="font-medium">File Size</span>
-  426 |                       </div>
-  427 |                       <p className="text-gray-900 font-semibold">{wordDocumentInfo.fileSize}</p>
-
-Expected '</', got '='
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:32.435] Server  LOG      ✓ Compiled in 134ms
-[00:27:32.436] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:27:34.299] Server  LOG      ✓ Compiled in 193ms
-[00:27:34.382] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:27:34.383] Browser WARN    Image with src "/images/asf-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:27:34.383] Browser ERROR   uncaughtError: ReferenceError: F is not defined
-[00:27:36.657] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:36.657] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:36.657] Browser ERROR   uncaughtError: ReferenceError: FileSize is not defined
-[00:27:36.657] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:36.657] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:41.179] Server  LOG      ✓ Compiled in 159ms
-[00:27:41.671] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:41.671] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:41.671] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:41.671] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:42.620] Server  LOG      ✓ Compiled in 206ms
-[00:27:43.669] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:43.669] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:43.669] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:43.669] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:52.727] Server  ERROR    ⨯ ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-
-
-
-./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-
-
-[00:27:52.862] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:52.862] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:53.744] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:53.744] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:53.943] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:53.943] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.393] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.393] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.393] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.393] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.393] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.393] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.659] Browser ERROR   uncaughtError: Error: ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-
-
-[00:27:55.665] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.665] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.799] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.799] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.909] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:55.909] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:56.659] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:27:56.659] Browser ERROR   ./app/about/page.tsx:5:1
-Export FileSize doesn't exist in target module
-  3 | import { Navigation } from "@/components/navigation"
-  4 | import { Footer } from "@/components/footer"
-> 5 | import { CheckCircle, Shield, Heart, Users, TreePine, BriefcaseMedical, ChevronLeft, ChevronRight, FileText, Calendar, FileSize, Clock, Layers, Eye } from "lucide-react"
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  6 | import { useEffect, useState } from "react"
-  7 | import Image from "next/image"
-  8 |
-
-The export FileSize was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
-Did you mean to import FileSliders?
-All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
-
-Import traces:
-  Client Component Browser:
-    ./app/about/page.tsx [Client Component Browser]
-    ./app/about/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/about/page.tsx [Client Component SSR]
-    ./app/about/page.tsx [Server Component]
-[00:28:01.935] Server  LOG      ✓ Compiled in 127ms
-[00:28:03.670] Browser WARN    Image with src "/images/asf-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:28:03.670] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:28:03.670] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/about","route":"/about"}
-[00:28:03.670] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767711138249}
-[00:28:06.221] Server  LOG      ✓ Compiled in 239ms
-[00:35:22.616] Server  LOG      ✓ Compiled in 329ms
+[00:00:05.729] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:06.315] Server  LOG      ✓ Ready in 4.4s
+[00:00:12.451] Server  LOG      ○ Compiling / ...
+[00:00:25.037] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:25.037] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:25.037] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768029050906}
+[00:16:43.665] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-work color: rgb(120, 120, 120) color: inherit {"dp":"/our-work","o":"http://localhost:3000/our-work","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768030029543}
+[00:17:50.723] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:17:50.723] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-work","route":"/our-work"}
+[00:17:50.724] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-work color: rgb(120, 120, 120) color: inherit {"dp":"/our-work","o":"http://localhost:3000/our-work","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768030096596}
+[00:31:04.875] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:04.875] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-work","route":"/our-work"}
+[00:31:04.875] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-work color: rgb(120, 120, 120) color: inherit {"dp":"/our-work","o":"http://localhost:3000/our-work","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768030890756}
+[00:31:18.416] Browser LOG     Loading team members from Firestore...
+[00:31:18.416] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:18.416] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
+[00:31:18.416] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768030904137}
+[00:31:18.416] Browser LOG     ✅ Loaded 45 team members
+[00:31:18.416] Browser LOG     Loading menu items from Firestore...
+[00:31:18.416] Browser LOG     ✅ Loaded 4 menu items
+[00:31:18.416] Browser LOG     🔄 Setting up Firestore real-time listener...
+[00:31:18.416] Browser LOG     🔄 Setting up menu items real-time listener...
+[00:35:32.613] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:35:32.613] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:35:32.613] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768031158479}
+[00:35:35.226] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-work color: rgb(120, 120, 120) color: inherit {"dp":"/our-work","o":"http://localhost:3000/our-work","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768031161103}
+[00:36:02.383] Browser LOG     Loading team members from Firestore...
+[00:36:02.383] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:36:02.383] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
+[00:36:02.383] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768031188262}
+[00:36:02.605] Browser LOG     ✅ Loaded 45 team members
+[00:36:02.605] Browser LOG     Loading menu items from Firestore...
+[00:36:02.605] Browser LOG     ✅ Loaded 4 menu items
+[00:36:02.605] Browser LOG     🔄 Setting up Firestore real-time listener...
+[00:36:02.605] Browser LOG     🔄 Setting up menu items real-time listener...
+[00:48:55.644] Server  LOG      ✓ Compiled in 99ms
+[00:49:04.102] Browser LOG     Loading team members from Firestore...
+[00:49:04.102] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:49:04.102] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
+[00:49:04.102] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768031969982}
+[00:49:04.276] Browser LOG     ✅ Loaded 45 team members
+[00:49:04.276] Browser LOG     Loading menu items from Firestore...
+[00:49:04.276] Browser LOG     ✅ Loaded 4 menu items
+[00:49:04.276] Browser LOG     🔄 Setting up Firestore real-time listener...
+[00:49:04.276] Browser LOG     🔄 Setting up menu items real-time listener...
+[00:49:15.871] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:49:15.871] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-work","route":"/our-work"}
+[00:49:15.871] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-work color: rgb(120, 120, 120) color: inherit {"dp":"/our-work","o":"http://localhost:3000/our-work","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768031981748}
+[00:49:54.876] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:49:54.876] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-work","route":"/our-work"}
+[00:49:54.876] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-work color: rgb(120, 120, 120) color: inherit {"dp":"/our-work","o":"http://localhost:3000/our-work","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768032020742}
+[00:51:13.557] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768032099412}
+[00:51:16.350] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-work color: rgb(120, 120, 120) color: inherit {"dp":"/our-work","o":"http://localhost:3000/our-work","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768032102214}
+[00:51:17.565] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768032103416}
+[00:51:21.461] Browser WARN    Image with src "/images/asf-logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:12:35.357] Server  LOG      ✓ Compiled in 358ms
+[01:12:38.126] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/bylaws-placeholder.jpg" "received" null
+[01:18:20.108] Server  LOG      ✓ Compiled in 256ms
+[01:18:35.817] Browser LOG     Loading team members from Firestore...
+[01:18:35.817] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:18:35.817] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
+[01:18:35.817] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768033741694}
+[01:18:36.049] Browser LOG     ✅ Loaded 45 team members
+[01:18:36.049] Browser LOG     Loading menu items from Firestore...
+[01:18:36.049] Browser LOG     ✅ Loaded 4 menu items
+[01:18:36.049] Browser LOG     🔄 Setting up Firestore real-time listener...
+[01:18:36.049] Browser LOG     🔄 Setting up menu items real-time listener...
+[01:18:49.023] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'substring')
+[01:18:49.023] Browser LOG     🧹 Cleaning up Firestore listeners
+[01:29:45.848] Server  LOG      ✓ Compiled in 180ms
+[01:29:45.856] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:29:48.367] Browser LOG     Loading team members from Firestore...
+[01:29:48.367] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:29:48.367] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
+[01:29:48.367] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768034413606}
+[01:29:48.367] Browser LOG     ✅ Loaded 45 team members
+[01:29:48.367] Browser LOG     Loading menu items from Firestore...
+[01:29:48.367] Browser LOG     ✅ Loaded 4 menu items
+[01:29:48.367] Browser LOG     🔄 Setting up Firestore real-time listener...
+[01:29:48.367] Browser LOG     🔄 Setting up menu items real-time listener...
+[01:30:19.376] Browser LOG     Loading team members from Firestore...
+[01:30:19.376] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:30:19.376] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard/team","route":"/dashboard/team"}
+[01:30:19.376] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard/team color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard/team","o":"http://localhost:3000/dashboard/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768034445249}
+[01:30:19.736] Browser LOG     ✅ Loaded 45 team members
+[01:30:19.736] Browser LOG     Loading menu items from Firestore...
+[01:30:19.736] Browser LOG     ✅ Loaded 4 menu items
+[01:30:19.736] Browser LOG     🔄 Setting up Firestore real-time listener...
+[01:30:19.736] Browser LOG     🔄 Setting up menu items real-time listener...
+[01:38:42.351] Server  LOG      ✓ Compiled in 416ms
+[01:39:01.059] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768034966936}
+[01:39:05.653] Server  LOG     Fetching team members for menuId: "cEZWhA6jO73WbQOHfmx7"
+[01:39:05.989] Server  LOG     Found 6 team members for menu cEZWhA6jO73WbQOHfmx7
+[01:39:05.990] Server  LOG     First member image URL: "Present"
+[01:39:05.991] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766564719336_8j3cxjdir5o_WhatsApp_Image_2025-12-05_at_18.10.09.jpeg?alt=media&token=549ce1f3-6e2b-4550-a077-c90615a02d98"
+[01:39:06.297] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/cEZWhA6jO73WbQOHfmx7 color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/cEZWhA6jO73WbQOHfmx7","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768034972168}
+[01:39:18.400] Server  LOG     Fetching team members for menuId: "PjAQlNkDDUvS3d6yD4ms"
+[01:39:18.629] Server  LOG     Found 27 team members for menu PjAQlNkDDUvS3d6yD4ms
+[01:39:18.630] Server  LOG     First member image URL: "Present"
+[01:39:18.631] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766826638380_jcvfg99wp4a_sanjay_agarwal_2.jpeg?alt=media&token=529f5b85-7a3f-46a4-8cba-2634461c64f3"
+[01:39:19.651] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndFocusHandler segmentPath={[...]}>
+        <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="PjAQlNkDDU..." loading={null}>
+              <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/team/PjAQ..." tree={[...]} params={{id:"PjAQlN..."}} ...>
+                      <SegmentViewNode type="page" pagePath="team/[id]/...">
+                        <SegmentTrieNode>
+                        <TeamPage>
+                          <div className="min-h-scre...">
+                            <div>
+                            <div className="max-w-7xl ...">
+                              <section className="mb-12">
+                                <h2>
+                                <div
++                                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+-                                 className="flex flex-col items-center text-center"
+                                >
+                                  <div
++                                   className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 hover:shadow-m..."
+-                                   className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-white shado..."
+                                  >
++                                   <div className="flex flex-col items-center text-center">
+-                                   <img
+-                                     src={"https://firebasestorage.googleapis.com/v0/b/global-shooting-league.fireba..."}
+-                                     alt="Sanjay Agarwal"
+-                                     width="128"
+-                                     height="128"
+-                                     className="w-full h-full object-cover"
+-                                     loading="lazy"
+-                                   >
+                                  ...
+                      ...
+                    ...
+          ...
+
+[01:39:19.651] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:39:19.651] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team/PjAQlNkDDUvS3d6yD4ms","route":"/team/[id]"}
+[01:39:19.651] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team/PjAQlNkDDUvS3d6yD4ms","route":"/team/[id]"}
+[01:39:19.651] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/PjAQlNkDDUvS3d6yD4ms color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/PjAQlNkDDUvS3d6yD4ms","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768034985522}
+[01:39:19.651] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/PjAQlNkDDUvS3d6yD4ms color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/PjAQlNkDDUvS3d6yD4ms","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768034985522}
+[01:44:46.308] Server  LOG      ✓ Compiled in 250ms
+[01:44:53.355] Server  LOG     Fetching team members for menuId: "cEZWhA6jO73WbQOHfmx7"
+[01:44:53.522] Server  LOG     Found 6 team members for menu cEZWhA6jO73WbQOHfmx7
+[01:44:53.523] Server  LOG     First member image URL: "Present"
+[01:44:53.524] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766564719336_8j3cxjdir5o_WhatsApp_Image_2025-12-05_at_18.10.09.jpeg?alt=media&token=549ce1f3-6e2b-4550-a077-c90615a02d98"
+[01:44:54.319] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:44:54.319] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/team/cEZWhA6jO73WbQOHfmx7","route":"/team/[id]"}
+[01:44:54.319] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/cEZWhA6jO73WbQOHfmx7 color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/cEZWhA6jO73WbQOHfmx7","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768035320197}
+[01:44:58.233] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {"dp":"/team","o":"http://localhost:3000/team","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768035324096}
+[01:45:00.034] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768035325870}
+[01:45:19.807] Server  LOG     Fetching team members for menuId: "2IHuMAalUlub0KpvJJpF"
+[01:45:19.932] Server  LOG     Found 5 team members for menu 2IHuMAalUlub0KpvJJpF
+[01:45:19.933] Server  LOG     First member image URL: "Present"
+[01:45:19.935] Server  LOG     URL: "https://firebasestorage.googleapis.com/v0/b/global-shooting-league.firebasestorage.app/o/team-members%2F1766652928958_xr642lvan2e_Yogi_Sharma_GBN_President.jpg?alt=media&token=52f14d26-1700-46f8-8670-187704209b6e"
+[01:45:20.179] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/team/2IHuMAalUlub0KpvJJpF color: rgb(120, 120, 120) color: inherit {"dp":"/team/[id]","o":"http://localhost:3000/team/2IHuMAalUlub0KpvJJpF","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768035346051}
+[01:45:26.225] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1768035352102}
